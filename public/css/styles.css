@@ -1190,7 +1190,7 @@ body {
 .sidebar-title {
     font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    color: var(--text-secondary);
+    color: var(--forest-green) !important;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border-light);
@@ -1274,14 +1274,14 @@ body {
 }
 
 .category-nav-item.active {
-    background-color: var(--forest-green-muted);
-    color: var(--text-primary);
-    border-color: var(--forest-green-muted);
+    background-color: var(--forest-green-light);
+    color: white;
+    border-color: var(--forest-green-light);
     font-weight: var(--font-weight-medium);
 }
 
 .category-nav-item.active:hover {
-    background-color: var(--forest-green-light);
+    background-color: var(--forest-green);
     color: white;
 }
 
@@ -1420,7 +1420,7 @@ body {
     padding: 1.5rem;
     background-color: var(--bg-secondary);
     border-radius: 8px;
-    border-left: 4px solid var(--forest-green);
+    border-left: 4px solid var(--forest-green-light);
     transition: var(--transition);
 }
 
@@ -1433,7 +1433,7 @@ body {
 .pub-year {
     font-size: 1rem;
     font-weight: var(--font-weight-bold);
-    color: var(--forest-green);
+    color: var(--forest-green-light);
     min-width: 50px;
     font-family: 'Inter', monospace;
 }
