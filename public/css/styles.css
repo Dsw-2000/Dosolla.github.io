@@ -501,12 +501,12 @@ body {
 }
 
 .about-title {
-    font-size: 3.5rem;
-    font-weight: var(--font-weight-light);
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-    letter-spacing: -1px;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    letter-spacing: 0;
     line-height: 1.1;
+    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
 }
 
 .about-subtitle {
@@ -544,14 +544,15 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--text-secondary);
+    color: var(--forest-green);
     text-decoration: none;
     font-weight: var(--font-weight-medium);
     padding: 0.75rem 1.25rem;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--forest-green);
     border-radius: 8px;
     transition: var(--transition);
     font-size: 0.9rem;
+    background: white;
 }
 
 .contact-link:hover {
