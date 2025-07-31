@@ -53,24 +53,137 @@
         </div>
         <div class="reports-layout">
             <div class="reports-sidebar">
-                <h3 class="sidebar-title">Table of contents</h3>
-                <div class="article-nav">
+                <h3 class="sidebar-title">Categories</h3>
+                <div class="category-nav">
                     
-                    <a href="#article-test-aviation-sound-design" class="article-nav-item">
-                        <span class="nav-title">Test: Aviation Sound Design - Creating Immersive Cockpit Audio Experiences</span>
-                        <span class="nav-date">2025/01/27</span>
-                    </a>
+                    
+                    
+                    
+                        
+                            
+                            <a href="#" class="category-nav-item active" data-category="all">
+                                <span class="category-title">All</span>
+                                <span class="category-count">(3)</span>
+                            </a>
+                        
+                    
+                        
+                            
+                            
+                                
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                            <a href="#" class="category-nav-item" data-category="experiments">
+                                <span class="category-title">Experiments</span>
+                                <span class="category-count">(1)</span>
+                            </a>
+                        
+                    
+                        
+                            
+                            
+                                
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                            <a href="#" class="category-nav-item" data-category="tutorials">
+                                <span class="category-title">Tutorials</span>
+                                <span class="category-count">(1)</span>
+                            </a>
+                        
+                    
+                        
+                            
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                            <a href="#" class="category-nav-item" data-category="scripts-sharing">
+                                <span class="category-title">Scripts Sharing</span>
+                                <span class="category-count">(0)</span>
+                            </a>
+                        
+                    
+                        
+                            
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                            <a href="#" class="category-nav-item" data-category="resources">
+                                <span class="category-title">Resources</span>
+                                <span class="category-count">(0)</span>
+                            </a>
+                        
+                    
+                        
+                            
+                            
+                                
+                                    
+                                
+                            
+                                
+                            
+                                
+                            
+                            <a href="#" class="category-nav-item" data-category="blogs">
+                                <span class="category-title">Blogs</span>
+                                <span class="category-count">(1)</span>
+                            </a>
+                        
                     
                 </div>
             </div>
             <div class="reports-content">
                 
-                <a href="/online_reports/test-aviation-sound-design/" class="blog-card-link">
+                <a href="/online_reports/test-blog/" class="blog-card-link" data-categories="[&#34;Blogs&#34;]">
+                <article id="article-test-blog" class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">2025年1月27日</span>
+                        
+                        <span class="blog-category">Blogs</span>
+                        
+                    </div>
+                    <h3 class="blog-title">Test Blog: My Journey in Sound Design</h3>
+                    <p class="blog-excerpt">Personal reflections on the evolution of sound design in modern media</p>
+                </article>
+                </a>
+                
+                <a href="/online_reports/test-tutorial/" class="blog-card-link" data-categories="[&#34;Tutorials&#34;]">
+                <article id="article-test-tutorial" class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">2025年1月27日</span>
+                        
+                        <span class="blog-category">Tutorials</span>
+                        
+                    </div>
+                    <h3 class="blog-title">Test Tutorial: Getting Started with Hugo</h3>
+                    <p class="blog-excerpt">A beginner&#39;s guide to setting up and using Hugo static site generator</p>
+                </article>
+                </a>
+                
+                <a href="/online_reports/test-aviation-sound-design/" class="blog-card-link" data-categories="[&#34;Experiments&#34;]">
                 <article id="article-test-aviation-sound-design" class="blog-card">
                     <div class="blog-meta">
                         <span class="blog-date">2025年1月27日</span>
                         
-                        <span class="blog-category">Technical Exploration</span>
+                        <span class="blog-category">Experiments</span>
                         
                     </div>
                     <h3 class="blog-title">Test: Aviation Sound Design - Creating Immersive Cockpit Audio Experiences</h3>
@@ -83,5 +196,37 @@
     </div>
     <script src="/js/fuse.min.js"></script>
     <script src="/js/script.js"></script>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryItems = document.querySelectorAll('.category-nav-item');
+            const blogCards = document.querySelectorAll('.blog-card-link');
+            
+            categoryItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    
+                    categoryItems.forEach(cat => cat.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    
+                    const selectedCategory = this.getAttribute('data-category');
+                    
+                    blogCards.forEach(card => {
+                        if (selectedCategory === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const cardCategories = JSON.parse(card.getAttribute('data-categories') || '[]');
+                            const categoryMatches = cardCategories.some(cat => 
+                                cat.toLowerCase().replace(/\s+/g, '-') === selectedCategory
+                            );
+                            card.style.display = categoryMatches ? 'block' : 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html> 

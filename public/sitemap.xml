@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/researches/</loc>
-    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
-  </url><url>
     <loc>https://example.org/categories/aerospace/</loc>
     <lastmod>2025-06-01T10:00:00+08:00</lastmod>
   </url><url>
@@ -21,6 +18,9 @@
     <lastmod>2025-06-01T10:00:00+08:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/research/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/researches/</loc>
     <lastmod>2025-06-01T10:00:00+08:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/simulation/</loc>
@@ -47,19 +47,52 @@
     <loc>https://example.org/tags/aviation/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://example.org/categories/blogs/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/career/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/experiments/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://example.org/tags/flight-simulation/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/hugo/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/markdown/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://example.org/tags/personal/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/reflection/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://example.org/tags/sound-design/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/technical-exploration/</loc>
+    <loc>https://example.org/tags/static-site/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/online_reports/test-blog/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/online_reports/test-tutorial/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://example.org/online_reports/test-aviation-sound-design/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/tutorial/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/tutorials/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/web-development/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97/</loc>

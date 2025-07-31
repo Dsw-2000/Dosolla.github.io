@@ -53,19 +53,36 @@
         </div>
         <div class="reports-layout">
             <div class="reports-sidebar">
-                <h3 class="sidebar-title">Table of contents</h3>
-                <div class="article-nav">
-                    {{ range .Pages }}
-                    <a href="#article-{{ .File.TranslationBaseName }}" class="article-nav-item">
-                        <span class="nav-title">{{ .Title }}</span>
-                        <span class="nav-date">{{ .Date.Format "2006/01/02" }}</span>
-                    </a>
+                <h3 class="sidebar-title">Categories</h3>
+                <div class="category-nav">
+                    {{/* 定义固定类别和保存所有页面集合 */}}
+                    {{ $categories := slice "All" "Experiments" "Tutorials" "Scripts Sharing" "Resources" "Blogs" }}
+                    {{ $allPages := .Pages }}
+                    {{ range $cat := $categories }}
+                        {{ if eq $cat "All" }}
+                            {{ $count := len $allPages }}
+                            <a href="#" class="category-nav-item active" data-category="all">
+                                <span class="category-title">{{ $cat }}</span>
+                                <span class="category-count">({{ $count }})</span>
+                            </a>
+                        {{ else }}
+                            {{ $count := 0 }}
+                            {{ range $allPages }}
+                                {{ if in .Params.categories $cat }}
+                                    {{ $count = add $count 1 }}
+                                {{ end }}
+                            {{ end }}
+                            <a href="#" class="category-nav-item" data-category="{{ $cat | urlize }}">
+                                <span class="category-title">{{ $cat }}</span>
+                                <span class="category-count">({{ $count }})</span>
+                            </a>
+                        {{ end }}
                     {{ end }}
                 </div>
             </div>
             <div class="reports-content">
                 {{ range .Pages }}
-                <a href="{{ .RelPermalink }}" class="blog-card-link">
+                <a href="{{ .RelPermalink }}" class="blog-card-link" data-categories="{{ .Params.categories | jsonify }}">
                 <article id="article-{{ .File.TranslationBaseName }}" class="blog-card">
                     <div class="blog-meta">
                         <span class="blog-date">{{ .Date.Format "2006年1月2日" }}</span>
@@ -83,5 +100,37 @@
     </div>
     <script src="/js/fuse.min.js"></script>
     <script src="/js/script.js"></script>
+    <script>
+        // 类别筛选功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryItems = document.querySelectorAll('.category-nav-item');
+            const blogCards = document.querySelectorAll('.blog-card-link');
+            
+            categoryItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // 移除所有active类
+                    categoryItems.forEach(cat => cat.classList.remove('active'));
+                    // 添加active类到当前点击的项
+                    this.classList.add('active');
+                    
+                    const selectedCategory = this.getAttribute('data-category');
+                    
+                    blogCards.forEach(card => {
+                        if (selectedCategory === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const cardCategories = JSON.parse(card.getAttribute('data-categories') || '[]');
+                            const categoryMatches = cardCategories.some(cat => 
+                                cat.toLowerCase().replace(/\s+/g, '-') === selectedCategory
+                            );
+                            card.style.display = categoryMatches ? 'block' : 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html> 

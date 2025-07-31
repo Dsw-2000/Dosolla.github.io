@@ -4,7 +4,7 @@ description = "Exploring the challenges and techniques of designing authentic co
 date = 2025-01-27
 draft = false
 tags = ["Aviation", "Sound Design", "Flight Simulation", "Audio Engineering", "Test"]
-categories = ["Technical Exploration"]
+categories = ["Experiments"]
 readingTime = "8 minutes"
 +++
 

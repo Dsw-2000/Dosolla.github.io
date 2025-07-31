@@ -23,10 +23,24 @@
       <description></description>
     </item>
     <item>
-      <title>Technical Exploration</title>
-      <link>https://example.org/categories/technical-exploration/</link>
+      <title>Blogs</title>
+      <link>https://example.org/categories/blogs/</link>
       <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/categories/technical-exploration/</guid>
+      <guid>https://example.org/categories/blogs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Experiments</title>
+      <link>https://example.org/categories/experiments/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/categories/experiments/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorials</title>
+      <link>https://example.org/categories/tutorials/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/categories/tutorials/</guid>
       <description></description>
     </item>
     <item>
