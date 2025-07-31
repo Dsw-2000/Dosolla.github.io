@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://example.org/researches/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/aerospace/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/engineering/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/open-source/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/research/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/simulation/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/spacecraft/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/test/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/researches/test-spacecraft-research/</loc>
+    <lastmod>2025-06-01T10:00:00+08:00</lastmod>
+  </url><url>
     <loc>https://example.org/online_reports/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,28 +47,16 @@
     <loc>https://example.org/tags/aviation/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
-    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://example.org/tags/flight-simulation/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/markdown/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
-    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://example.org/tags/sound-design/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/</loc>
-    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://example.org/categories/technical-exploration/</loc>
-    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/test/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://example.org/online_reports/test-aviation-sound-design/</loc>
@@ -56,6 +80,12 @@
     <loc>https://example.org/tags/%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9/</loc>
     <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/online_reports/readme/</loc>
+    <loc>https://example.org/readme/</loc>
+  </url><url>
+    <loc>https://example.org/about/</loc>
+  </url><url>
+    <loc>https://example.org/box/</loc>
+  </url><url>
+    <loc>https://example.org/publications/</loc>
   </url>
 </urlset>

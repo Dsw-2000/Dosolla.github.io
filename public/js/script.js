@@ -12,15 +12,16 @@ const submitMessage = document.getElementById('submitMessage');
 const messagesFlow = document.querySelector('.messages-flow');
 
 // 只在主页绑定导航切换事件
-if (document.body.classList.contains('home-page')) {
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetPage = this.getAttribute('href').substring(1);
-            switchPage(targetPage);
-        });
-    });
-}
+// 已废弃SPA切换，彻底移除
+// if (document.body.classList.contains('home-page')) {
+//     navLinks.forEach(link => {
+//         link.addEventListener('click', function(e) {
+//             e.preventDefault();
+//             const targetPage = this.getAttribute('href').substring(1);
+//             switchPage(targetPage);
+//         });
+//     });
+// }
 
 // 主题切换功能
 function toggleTheme() {
@@ -279,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // 主题切换事件
-    themeToggle.addEventListener('click', toggleTheme);
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
     
     // 搜索功能事件
     if (searchBtn) searchBtn.addEventListener('click', openSearch);
@@ -300,22 +301,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // 留言提交事件
-    submitMessage.addEventListener('click', function() {
-        const content = messageInput.value.trim();
-        if (content) {
-            // 默认添加为读者想法
-            addMessage(content, false);
-            messageInput.value = '';
-        }
-    });
+    if (submitMessage) {
+        submitMessage.addEventListener('click', function() {
+            const content = messageInput.value.trim();
+            if (content) {
+                // 默认添加为读者想法
+                addMessage(content, false);
+                messageInput.value = '';
+            }
+        });
+    }
     
     // 回车提交留言
-    messageInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            submitMessage.click();
-        }
-    });
+    if (messageInput) {
+        messageInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                submitMessage.click();
+            }
+        });
+    }
     
     // 为现有的点赞按钮添加事件
     document.querySelectorAll('.like-btn').forEach(btn => {

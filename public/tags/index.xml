@@ -6,8 +6,43 @@
     <description>Recent content in Tags on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jun 2025 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open Source</title>
+      <link>https://example.org/tags/open-source/</link>
+      <pubDate>Sun, 01 Jun 2025 10:00:00 +0800</pubDate>
+      <guid>https://example.org/tags/open-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>https://example.org/tags/research/</link>
+      <pubDate>Sun, 01 Jun 2025 10:00:00 +0800</pubDate>
+      <guid>https://example.org/tags/research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Simulation</title>
+      <link>https://example.org/tags/simulation/</link>
+      <pubDate>Sun, 01 Jun 2025 10:00:00 +0800</pubDate>
+      <guid>https://example.org/tags/simulation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spacecraft</title>
+      <link>https://example.org/tags/spacecraft/</link>
+      <pubDate>Sun, 01 Jun 2025 10:00:00 +0800</pubDate>
+      <guid>https://example.org/tags/spacecraft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>https://example.org/tags/test/</link>
+      <pubDate>Sun, 01 Jun 2025 10:00:00 +0800</pubDate>
+      <guid>https://example.org/tags/test/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Audio Engineering</title>
       <link>https://example.org/tags/audio-engineering/</link>
@@ -41,13 +76,6 @@
       <link>https://example.org/tags/sound-design/</link>
       <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://example.org/tags/sound-design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Test</title>
-      <link>https://example.org/tags/test/</link>
-      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/tags/test/</guid>
       <description></description>
     </item>
     <item>

@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="light-mode">
+<body class="light-mode single-page">
     <!-- 注意：body有padding-top: 70px，确保导航栏不会被内容覆盖 -->
     <!-- 导航栏 -->
     <nav class="navbar">
@@ -20,11 +20,11 @@
                 </a>
             </div>
             <div class="nav-center">
-                <a href="/#about" class="nav-link">About</a>
-                <a href="/#reports" class="nav-link">Online Reports</a>
-                <a href="/#publications" class="nav-link">Publications</a>
-                <a href="/#researches" class="nav-link">Researches</a>
-                <a href="/#box" class="nav-link">BOX</a>
+                <a href="/about/" class="nav-link">About</a>
+                <a href="/online_reports/" class="nav-link {{ if eq .Section "online_reports" }}active{{ end }}">Online Reports</a>
+                <a href="/publications/" class="nav-link {{ if eq .Section "publications" }}active{{ end }}">Publications</a>
+                <a href="/researches/" class="nav-link {{ if eq .Section "researches" }}active{{ end }}">Researches</a>
+                <a href="/box/" class="nav-link {{ if eq .Section "box" }}active{{ end }}">BOX</a>
             </div>
             <div class="nav-right">
                 <button class="search-btn" id="searchBtn">
@@ -50,8 +50,9 @@
     <main class="main-content">
         <div class="container">
             <article class="article-content">
-                <a href="/#reports" class="back-to-reports">
-                    <i class="fas fa-arrow-left"></i> 返回 Online Reports
+                <a href="/{{ .Section }}/" class="back-to-reports">
+                    <i class="fas fa-arrow-left"></i> 
+                    {{ if eq .Section "online_reports" }}All Reports{{ else if eq .Section "researches" }}All Researches{{ else }}Back{{ end }}
                 </a>
                 <header class="article-header">
                     <h1 class="article-title">{{ .Title }}</h1>

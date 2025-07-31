@@ -20,11 +20,11 @@
             </div>
             
             <div class="nav-center">
-                <a href="#about" class="nav-link active">About</a>
-                <a href="#reports" class="nav-link">Online Reports</a>
-                <a href="#publications" class="nav-link">Publications</a>
-                <a href="#researches" class="nav-link">Researches</a>
-                <a href="#box" class="nav-link">BOX</a>
+                <a href="/about/" class="nav-link">About</a>
+                <a href="/online_reports/" class="nav-link">Online Reports</a>
+                <a href="/publications/" class="nav-link">Publications</a>
+                <a href="/researches/" class="nav-link">Researches</a>
+                <a href="/box/" class="nav-link">BOX</a>
             </div>
             
             <div class="nav-right">
@@ -58,7 +58,6 @@
                 <div style="position:absolute;right:2vw;bottom:2vw;width:120px;height:8px;border-radius:4px;background:linear-gradient(90deg,rgba(45,80,22,0.08) 0%,rgba(76,175,80,0.12) 100%);"></div>
             </div>
         </section>
-
         <!-- About 页面 -->
         <section id="about" class="page">
             <div class="container">
@@ -67,15 +66,11 @@
                         <h1 class="about-title">SiLi Ding</h1>
                         <p class="about-subtitle"></p>
                     </div>
-                    
                     <div class="about-text">
                         <p>这里是你的个人简介。你可以描述你的专业背景、研究兴趣、工作经验等。建议保持简洁明了，突出你的核心优势和专业领域。</p>
-                        
                         <p>你可以添加更多段落来描述你的教育背景、工作经历、项目经验等。让访问者能够快速了解你的专业能力和个人特色。</p>
-                        
                         <p>如果你有特殊的研究方向或技术专长，也可以在这里详细说明。这样可以帮助潜在的合作伙伴或雇主更好地了解你的价值。</p>
                     </div>
-                    
                     <div class="about-links">
                         <a href="#" class="contact-link">
                             <i class="fas fa-envelope"></i>
@@ -93,216 +88,6 @@
                             <i class="fab fa-weixin"></i>
                             微信公众号
                         </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Online Reports 页面 -->
-        <section id="reports" class="page">
-            <div class="container">
-                <div class="page-header">
-                    <h2>Online Reports</h2>
-                    <p>Latest articles, research reports, and recommended materials</p>
-                </div>
-                
-                <div class="reports-layout">
-                    <!-- 左侧导航栏 -->
-                    <div class="reports-sidebar">
-                        <h3 class="sidebar-title">文章目录</h3>
-                        <div class="article-nav">
-                            {{ range where .Site.RegularPages "Section" "online_reports" }}
-                            <a href="#article-{{ .File.TranslationBaseName }}" class="article-nav-item">
-                                <span class="nav-title">{{ .Title }}</span>
-                                <span class="nav-date">{{ .Date.Format "2006/01/02" }}</span>
-                            </a>
-                            {{ end }}
-                        </div>
-                    </div>
-                    
-                    <!-- 右侧内容区 -->
-                    <div class="reports-content">
-                        {{ range where .Site.RegularPages "Section" "online_reports" }}
-                        <a href="{{ .RelPermalink }}" class="blog-card-link">
-                        <article id="article-{{ .File.TranslationBaseName }}" class="blog-card">
-                            <div class="blog-meta">
-                                <span class="blog-date">{{ .Date.Format "2006年1月2日" }}</span>
-                                {{ if .Params.categories }}
-                                <span class="blog-category">{{ index .Params.categories 0 }}</span>
-                                {{ end }}
-                            </div>
-                            <h3 class="blog-title">{{ .Title }}</h3>
-                            <p class="blog-excerpt">{{ .Description }}</p>
-                            <div class="blog-footer">
-                                {{ if .Params.readingTime }}
-                                <span class="read-time">{{ .Params.readingTime }}</span>
-                                {{ end }}
-                            </div>
-                        </article>
-                        </a>
-                        {{ end }}
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- Publications 页面 -->
-        <section id="publications" class="page">
-            <div class="container">
-                <div class="page-header">
-                    <h2>Publications</h2>
-                    <p>Dissertation & research publications</p>
-                </div>
-                
-                <div class="publications-simple">
-                    <div class="publication-simple-item">
-                        <div class="pub-year">2025</div>
-                        <div class="pub-info">
-                            <h3>Application Effects and Optimization Strategies of AI Speech Synthesis Technology in Film Dialogue Production</h3>
-                            <p class="pub-authors">SiLi Ding, Shuang Wu, JiaWei Zhang</p>
-                            <p class="pub-venue">ADVANCED MOTION PICTURE TECHNOLOGY, 2025</p>
-                            <div class="pub-links">
-                                <a href="/publications/2025_AI_Speech_Synthesis.pdf" class="pub-link" target="_blank">PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="publication-simple-item">
-                        <div class="pub-year">2024</div>
-                        <div class="pub-info">
-                            <h3>Application and Prospect of Artificial Intelligence Technology in Film Sound Production</h3>
-                            <p class="pub-authors">BaoFeng Shi, SiLi Ding</p>
-                            <p class="pub-venue">ADVANCED MOTION PICTURE TECHNOLOGY, 2024</p>
-                            <div class="pub-links">
-                                <a href="/publications/2024_AI_Film_Sound.pdf" class="pub-link" target="_blank">PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="publication-simple-item">
-                        <div class="pub-year">2023</div>
-                        <div class="pub-info">
-                            <h3>Shaping Special Speech Sound Representation of "Humanoid" Characters —— Taking the Experiment of Baron Harkonnen's Dialogue in Dune as an Example</h3>
-                            <p class="pub-authors">SiLi Ding</p>
-                            <p class="pub-venue">Bachlor Essay, 2023</p>
-                            <div class="pub-links">
-                                <a href="/publications/2023_Humanoid_Speech.pdf" class="pub-link" target="_blank">PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Researches 页面 -->
-        <section id="researches" class="page">
-            <div class="container">
-                <div class="page-header">
-                    <h2>Researches</h2>
-                    <div class="page-description">
-                        <p>This page showcases my personal research projects and tool developments, including:</p>
-                        <ul>
-                            <li>Design concepts</li>
-                            <li>Technical implementation</li>
-                            <li>Code details</li>
-                            <li>Usage instructions</li>
-                            <li>Final deliverables</li>
-                        </ul>
-                        <p>Feel free to explore, provide feedback, or collaborate.</p>
-                    </div>
-                </div>
-                
-                <div class="research-grid">
-                    <div class="research-card">
-                        <div class="research-image">
-                            <div class="research-placeholder"></div>
-                        </div>
-                        <div class="research-content">
-                            <h3>研究项目一</h3>
-                            <p>这是第一个研究项目的详细描述，包括研究目标、方法和成果...</p>
-                            <div class="research-tags">
-                                <span class="research-tag">机器学习</span>
-                                <span class="research-tag">数据分析</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="research-card">
-                        <div class="research-image">
-                            <div class="research-placeholder"></div>
-                        </div>
-                        <div class="research-content">
-                            <h3>研究项目二</h3>
-                            <p>这是第二个研究项目的详细描述，展示不同的研究方向和技术应用...</p>
-                            <div class="research-tags">
-                                <span class="research-tag">人工智能</span>
-                                <span class="research-tag">计算机视觉</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BOX 页面 -->
-        <section id="box" class="page">
-            <div class="container">
-                <div class="page-header box-header">
-                    <h2>BOX</h2>
-                    <div class="page-description">
-                        <p>Welcome to the Box — an open space for all readers to freely share your thoughts, feedback, interests, and ideas for future content you'd like to see here.</p>
-                    </div>
-                </div>
-                
-                <div class="box-content">
-                    <div class="message-form">
-                        <textarea id="messageInput" placeholder="分享你的想法..." maxlength="300"></textarea>
-                        <button id="submitMessage" class="submit-btn">发送</button>
-                    </div>
-                    
-                    <div class="messages-flow">
-                        <div class="message-bubble my-message">
-                            <div class="message-content">
-                                <p>关于未来研究方向的一些思考...</p>
-                            </div>
-                            <div class="message-meta">
-                                <span class="author-tag">SD</span>
-                                <span class="message-time">1天前</span>
-                                <button class="like-btn" data-likes="8">
-                                    <i class="fas fa-heart"></i>
-                                    <span class="like-count">8</span>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="message-bubble reader-message">
-                            <div class="message-content">
-                                <p>希望看到更多关于机器学习的文章！</p>
-                            </div>
-                            <div class="message-meta">
-                                <span class="author-tag">读者</span>
-                                <span class="message-time">2小时前</span>
-                                <button class="like-btn" data-likes="12">
-                                    <i class="fas fa-heart"></i>
-                                    <span class="like-count">12</span>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="message-bubble reader-message">
-                            <div class="message-content">
-                                <p>能否写一篇关于数据可视化的教程？</p>
-                            </div>
-                            <div class="message-meta">
-                                <span class="author-tag">读者</span>
-                                <span class="message-time">1天前</span>
-                                <button class="like-btn" data-likes="8">
-                                    <i class="fas fa-heart"></i>
-                                    <span class="like-count">8</span>
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
