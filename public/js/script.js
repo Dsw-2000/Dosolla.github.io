@@ -305,11 +305,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 为出版物链接添加点击效果
     document.querySelectorAll('.pub-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            // 这里可以添加实际的链接跳转逻辑
-            console.log('点击了链接:', this.textContent);
-        });
+        // link.addEventListener('click', function(e) {
+        //    e.preventDefault();
+        //    // 这里可以添加实际的链接跳转逻辑
+        //    console.log('点击了链接:', this.textContent);
+        //});
     });
     
     // 为研究卡片添加点击效果
