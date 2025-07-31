@@ -4,7 +4,12 @@ title = 'My New Hugo Site'
 # theme = 'ananke'
 
 [outputs]
-home = ["HTML"]
+home = ["HTML", "JSON"]
 
 [params]
 custom_index = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

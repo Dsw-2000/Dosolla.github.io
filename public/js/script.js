@@ -1,3 +1,4 @@
+console.log("script.js loaded");
 // DOM 元素
 const navLinks = document.querySelectorAll('.nav-link');
 const pages = document.querySelectorAll('.page');
@@ -9,6 +10,17 @@ const searchInput = document.getElementById('searchInput');
 const messageInput = document.getElementById('messageInput');
 const submitMessage = document.getElementById('submitMessage');
 const messagesFlow = document.querySelector('.messages-flow');
+
+// 只在主页绑定导航切换事件
+if (document.body.classList.contains('home-page')) {
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetPage = this.getAttribute('href').substring(1);
+            switchPage(targetPage);
+        });
+    });
+}
 
 // 主题切换功能
 function toggleTheme() {
@@ -47,15 +59,143 @@ function switchPage(targetPage) {
     }
 }
 
+// 全局变量
+let searchIndex = [];
+let fuse = null;
+
 // 搜索功能
 function openSearch() {
+    console.log("openSearch called");
     searchOverlay.classList.add('active');
     searchInput.focus();
+    loadSearchIndex();
 }
 
 function closeSearch() {
+    console.log("closeSearch called");
     searchOverlay.classList.remove('active');
     searchInput.value = '';
+    clearSearchResults();
+}
+
+// 加载搜索索引
+async function loadSearchIndex() {
+    console.log("fetching /index.json");
+    if (searchIndex.length > 0) {
+        console.log("searchIndex already loaded, length:", searchIndex.length);
+        return;
+    }
+    
+    try {
+        const response = await fetch('/index.json');
+        console.log("fetch response status:", response.status);
+        searchIndex = await response.json();
+        console.log("searchIndex loaded, length:", searchIndex.length);
+        
+        // 初始化 Fuse.js
+        console.log("Fuse available:", typeof Fuse);
+        initFuse();
+    } catch (error) {
+        console.error('加载搜索索引失败:', error);
+    }
+}
+
+// 初始化 Fuse.js
+function initFuse() {
+    fuse = new Fuse(searchIndex, {
+        keys: ['title', 'description', 'content', 'tags'],
+        threshold: 0.5,
+        minMatchCharLength: 2,
+        includeScore: true,
+        includeMatches: true,
+        findAllMatches: true,
+        useExtendedSearch: true,
+        distance: 10000,
+        ignoreLocation: true
+    });
+    console.log("Fuse initialized successfully");
+}
+
+// 搜索功能实现 - 包含式搜索
+function performSearch(query) {
+    if (!fuse || !query.trim()) {
+        clearSearchResults();
+        return;
+    }
+    // 先用 Fuse 粗筛
+    let results = fuse.search(query);
+    // 二次过滤：只保留以 query 为前缀的单词
+    const word = query.trim().toLowerCase();
+    const prefixBoundary = new RegExp(`\\b${word}\\w*`, 'i');
+    let filtered = results.filter(result => {
+        return (
+            prefixBoundary.test(result.item.title) ||
+            prefixBoundary.test(result.item.description || '') ||
+            prefixBoundary.test(result.item.content || '') ||
+            (Array.isArray(result.item.tags) && result.item.tags.some(tag => prefixBoundary.test(tag)))
+        );
+    });
+    // 如果前缀匹配没有结果，兜底返回原始 Fuse 结果
+    if (filtered.length === 0) filtered = results;
+    displaySearchResults(filtered, query);
+}
+
+// 显示搜索结果
+function displaySearchResults(results, query) {
+    console.log("displaySearchResults called with", results.length, "results");
+    const resultsContainer = document.getElementById('searchResults');
+    console.log("resultsContainer found:", !!resultsContainer);
+    
+    if (results.length === 0) {
+        console.log("No results found, showing no-results message");
+        resultsContainer.innerHTML = '<div class="no-results">没有找到相关结果</div>';
+        resultsContainer.classList.add('active');
+        console.log("Added 'active' class to resultsContainer");
+        return;
+    }
+    
+    console.log("Building results HTML for", results.length, "results");
+    const resultsHTML = results.slice(0, 10).map(result => {
+        const item = result.item;
+        // 只用自定义高亮
+        let title = highlightText(item.title, query);
+        let description = highlightText(item.description || '', query);
+        
+        return `
+            <div class="search-result-item" onclick="goToArticle('${item.url}')">
+                <div class="search-result-title">${title}</div>
+                <div class="search-result-description">${description}</div>
+                <div class="search-result-meta">
+                    <span class="search-result-date">${item.date}</span>
+                    ${item.tags ? `<div class="search-result-tags">${item.tags.map(tag => `<span class="search-result-tag">#${tag}</span>`).join('')}</div>` : ''}
+                </div>
+            </div>
+        `;
+    }).join('');
+    
+    console.log("Setting resultsContainer HTML, length:", resultsHTML.length);
+    resultsContainer.innerHTML = resultsHTML;
+    resultsContainer.classList.add('active');
+}
+
+// 高亮文本，只高亮以query为前缀的单词
+function highlightText(text, query) {
+    if (!query) return text;
+    const word = query.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // 转义正则
+    const regex = new RegExp(`\\b(${word}\\w*)`, 'gi');
+    return text.replace(regex, '<span class="search-highlight">$1</span>');
+}
+
+// 清除搜索结果
+function clearSearchResults() {
+    const resultsContainer = document.getElementById('searchResults');
+    resultsContainer.innerHTML = '';
+    resultsContainer.classList.remove('active');
+}
+
+// 跳转到文章
+function goToArticle(url) {
+    window.location.href = url;
 }
 
 // 添加新留言
@@ -127,16 +267,9 @@ function getTimeAgo(date) {
     }
 }
 
-// 搜索功能实现
-function performSearch(query) {
-    // 这里可以实现实际的搜索逻辑
-    console.log('搜索:', query);
-    
-    // 可以在这里添加搜索结果的显示逻辑
-    // 比如高亮匹配的文本，或者显示搜索结果列表
-}
-
 // 事件监听器
+// 保证所有页面都能绑定搜索相关事件
+
 document.addEventListener('DOMContentLoaded', function() {
     // 初始化主题
     const savedTheme = localStorage.getItem('theme') || 'light';
@@ -145,36 +278,26 @@ document.addEventListener('DOMContentLoaded', function() {
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
     
-    // 导航链接点击事件
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetPage = this.getAttribute('href').substring(1);
-            switchPage(targetPage);
-        });
-    });
-    
     // 主题切换事件
     themeToggle.addEventListener('click', toggleTheme);
     
     // 搜索功能事件
-    searchBtn.addEventListener('click', openSearch);
-    searchClose.addEventListener('click', closeSearch);
-    
-    // 点击搜索框外部关闭
-    searchOverlay.addEventListener('click', function(e) {
-        if (e.target === searchOverlay) {
-            closeSearch();
-        }
+    if (searchBtn) searchBtn.addEventListener('click', openSearch);
+    if (searchClose) searchClose.addEventListener('click', closeSearch);
+    if (searchOverlay) searchOverlay.addEventListener('click', function(e) {
+        if (e.target === searchOverlay) closeSearch();
     });
-    
-    // 搜索输入事件
-    searchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
             performSearch(this.value);
-            closeSearch();
-        }
-    });
+        });
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const results = document.querySelectorAll('.search-result-item');
+                if (results.length > 0) results[0].click();
+            }
+        });
+    }
     
     // 留言提交事件
     submitMessage.addEventListener('click', function() {

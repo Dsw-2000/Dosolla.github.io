@@ -2,23 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-07-30T16:43:17+08:00</lastmod>
+    <loc>https://example.org/online_reports/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-07-30T16:43:17+08:00</lastmod>
+    <loc>https://example.org/tags/audio-engineering/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/test-post/</loc>
-    <lastmod>2025-07-30T16:43:17+08:00</lastmod>
+    <loc>https://example.org/tags/aviation/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/%E7%A1%95%E5%A3%AB%E5%BC%80%E9%A2%98%E7%AD%94%E8%BE%A9ppt-%E6%BC%94%E8%AE%B2%E7%A8%BF/</loc>
+    <loc>https://example.org/categories/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/about/</loc>
+    <loc>https://example.org/tags/flight-simulation/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://example.org/tags/markdown/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://example.org/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://example.org/tags/sound-design/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/technical-exploration/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/test/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/online_reports/test-aviation-sound-design/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E5%A4%AA%E7%A9%BA/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/markdown_tutorial/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/online_reports/readme/</loc>
   </url>
 </urlset>

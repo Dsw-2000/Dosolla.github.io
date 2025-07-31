@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<meta name="generator" content="Hugo 0.148.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.148.2">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SiLi Ding - Personal Website</title>
@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="light-mode">
+<body class="light-mode home-page">
     
     <nav class="navbar">
         <div class="nav-container">
@@ -42,10 +42,11 @@
     
     <div class="search-overlay" id="searchOverlay">
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="搜索文章、主题..." autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search by title, content, tags..." autocomplete="off">
             <button class="search-close" id="searchClose">
                 <i class="fas fa-times"></i>
             </button>
+            <div class="search-results" id="searchResults"></div>
         </div>
     </div>
 
@@ -65,7 +66,7 @@
                 <div class="about-content">
                     <div class="about-header">
                         <h1 class="about-title">SiLi Ding</h1>
-                        <p class="about-subtitle">Sound Designer & Tech Explorer</p>
+                        <p class="about-subtitle"></p>
                     </div>
                     
                     <div class="about-text">
@@ -103,7 +104,7 @@
             <div class="container">
                 <div class="page-header">
                     <h2>Online Reports</h2>
-                    <p>最新的博客文章和研究报告</p>
+                    <p>Latest articles, research reports, and recommended materials</p>
                 </div>
                 
                 <div class="reports-layout">
@@ -111,61 +112,55 @@
                     <div class="reports-sidebar">
                         <h3 class="sidebar-title">文章目录</h3>
                         <div class="article-nav">
-                            <a href="#article1" class="article-nav-item active">
-                                <span class="nav-title">示例博客文章标题</span>
-                                <span class="nav-date">2024/01/15</span>
+                            
+                            <a href="#article-test-aviation-sound-design" class="article-nav-item">
+                                <span class="nav-title">Test: Aviation Sound Design - Creating Immersive Cockpit Audio Experiences</span>
+                                <span class="nav-date">2025/01/27</span>
                             </a>
-                            <a href="#article2" class="article-nav-item">
-                                <span class="nav-title">另一篇示例文章</span>
-                                <span class="nav-date">2024/01/10</span>
+                            
+                            <a href="#article-README" class="article-nav-item">
+                                <span class="nav-title"></span>
+                                <span class="nav-date">0001/01/01</span>
                             </a>
-                            <a href="#article3" class="article-nav-item">
-                                <span class="nav-title">第三篇示例文章</span>
-                                <span class="nav-date">2024/01/05</span>
-                            </a>
+                            
                         </div>
                     </div>
                     
                     
                     <div class="reports-content">
-                        <article id="article1" class="blog-card">
-                        <div class="blog-meta">
-                            <span class="blog-date">2024年1月15日</span>
-                            <span class="blog-category">技术</span>
-                        </div>
-                        <h3 class="blog-title">示例博客文章标题</h3>
-                        <p class="blog-excerpt">这是博客文章的摘要，简要介绍文章的主要内容和观点...</p>
-                        <div class="blog-footer">
-                            <span class="read-time">5分钟阅读</span>
-                            <button class="read-more">阅读更多</button>
-                        </div>
-                    </article>
-                    
-                        <article id="article2" class="blog-card">
-                        <div class="blog-meta">
-                            <span class="blog-date">2024年1月10日</span>
-                            <span class="blog-category">研究</span>
-                        </div>
-                        <h3 class="blog-title">另一篇示例文章</h3>
-                        <p class="blog-excerpt">这是另一篇博客文章的摘要，展示不同的主题和内容...</p>
-                        <div class="blog-footer">
-                            <span class="read-time">8分钟阅读</span>
-                            <button class="read-more">阅读更多</button>
-                        </div>
-                    </article>
                         
-                        <article id="article3" class="blog-card">
+                        <a href="/online_reports/test-aviation-sound-design/" class="blog-card-link">
+                        <article id="article-test-aviation-sound-design" class="blog-card">
                             <div class="blog-meta">
-                                <span class="blog-date">2024年1月5日</span>
-                                <span class="blog-category">设计</span>
+                                <span class="blog-date">2025年1月27日</span>
+                                
+                                <span class="blog-category">Technical Exploration</span>
+                                
                             </div>
-                            <h3 class="blog-title">第三篇示例文章</h3>
-                            <p class="blog-excerpt">这是第三篇博客文章的摘要，展示设计相关的内容...</p>
+                            <h3 class="blog-title">Test: Aviation Sound Design - Creating Immersive Cockpit Audio Experiences</h3>
+                            <p class="blog-excerpt">Exploring the challenges and techniques of designing authentic cockpit sounds for flight simulation and aviation training applications</p>
                             <div class="blog-footer">
-                                <span class="read-time">6分钟阅读</span>
-                                <button class="read-more">阅读更多</button>
+                                
+                                <span class="read-time">8 minutes</span>
+                                
                             </div>
                         </article>
+                        </a>
+                        
+                        <a href="/online_reports/readme/" class="blog-card-link">
+                        <article id="article-README" class="blog-card">
+                            <div class="blog-meta">
+                                <span class="blog-date">0001年1月1日</span>
+                                
+                            </div>
+                            <h3 class="blog-title"></h3>
+                            <p class="blog-excerpt"></p>
+                            <div class="blog-footer">
+                                
+                            </div>
+                        </article>
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -225,7 +220,17 @@
             <div class="container">
                 <div class="page-header">
                     <h2>Researches</h2>
-                    <p>研究项目和成果展示</p>
+                    <div class="page-description">
+                        <p>This page showcases my personal research projects and tool developments, including:</p>
+                        <ul>
+                            <li>Design concepts</li>
+                            <li>Technical implementation</li>
+                            <li>Code details</li>
+                            <li>Usage instructions</li>
+                            <li>Final deliverables</li>
+                        </ul>
+                        <p>Feel free to explore, provide feedback, or collaborate.</p>
+                    </div>
                 </div>
                 
                 <div class="research-grid">
@@ -263,9 +268,11 @@
         
         <section id="box" class="page">
             <div class="container">
-                <div class="page-header">
+                <div class="page-header box-header">
                     <h2>BOX</h2>
-                    <p>自由表达的空间</p>
+                    <div class="page-description">
+                        <p>Welcome to the Box — an open space for all readers to freely share your thoughts, feedback, interests, and ideas for future content you'd like to see here.</p>
+                    </div>
                 </div>
                 
                 <div class="box-content">
@@ -322,6 +329,7 @@
         </section>
     </main>
 
-    <script src="js/script.js"></script>
+    <script src="/js/fuse.min.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html> 

@@ -1,0 +1,16 @@
+TEST AUDIO FILE: test-engine-startup.mp3
+
+This is a placeholder for the engine startup audio file.
+In a real implementation, this would be an actual MP3 file containing:
+
+- APU start sequence (0:00-0:15)
+- Main engine ignition (0:15-0:45)
+- Engine spool-up (0:45-1:30)
+- Stabilization at idle (1:30-2:34)
+
+Duration: 2:34
+Sample Rate: 44.1kHz
+Bit Depth: 24-bit
+Channels: Stereo
+
+File size would be approximately 8-12MB depending on compression. 

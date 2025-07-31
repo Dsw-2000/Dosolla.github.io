@@ -2,10 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My New Hugo Site</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://example.org/tags/</link>
     <description>Recent content in Tags on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Audio Engineering</title>
+      <link>https://example.org/tags/audio-engineering/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/audio-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aviation</title>
+      <link>https://example.org/tags/aviation/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/aviation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flight Simulation</title>
+      <link>https://example.org/tags/flight-simulation/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/flight-simulation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://example.org/tags/markdown/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sound Design</title>
+      <link>https://example.org/tags/sound-design/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/sound-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>https://example.org/tags/test/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>写作指南</title>
+      <link>https://example.org/tags/%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>太空</title>
+      <link>https://example.org/tags/%E5%A4%AA%E7%A9%BA/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/%E5%A4%AA%E7%A9%BA/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>教程</title>
+      <link>https://example.org/tags/%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>航空航天</title>
+      <link>https://example.org/tags/%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
