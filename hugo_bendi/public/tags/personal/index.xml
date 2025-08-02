@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/personal/</link>
+    <description>Recent content in Personal on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Blog: My Journey in Sound Design</title>
+      <link>http://localhost:1313/online_reports/test-blog/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/online_reports/test-blog/</guid>
+      <description>&lt;h1 id=&#34;my-journey-in-sound-design&#34;&gt;My Journey in Sound Design&lt;/h1&gt;&#xA;&lt;p&gt;This is a test blog post to demonstrate the category filtering functionality.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;My journey in sound design began with a simple curiosity about how sounds shape our experiences in media.&lt;/p&gt;&#xA;&lt;h2 id=&#34;learning-and-growth&#34;&gt;Learning and Growth&lt;/h2&gt;&#xA;&lt;p&gt;Over the years, I&amp;rsquo;ve learned that sound design is not just about creating sounds, but about creating experiences.&lt;/p&gt;&#xA;&lt;h2 id=&#34;current-focus&#34;&gt;Current Focus&lt;/h2&gt;&#xA;&lt;p&gt;Today, I focus on aviation sound design and creating immersive audio experiences for flight simulation.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
