@@ -155,5 +155,33 @@
       <guid>http://localhost:1313/tags/%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9/</guid>
       <description></description>
     </item>
+    <item>
+      <title>5.1 Channel</title>
+      <link>http://localhost:1313/tags/5.1-channel/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/5.1-channel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Sound</title>
+      <link>http://localhost:1313/tags/ai-sound/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ai-sound/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Film Production</title>
+      <link>http://localhost:1313/tags/film-production/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/film-production/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technical Achievements</title>
+      <link>http://localhost:1313/tags/technical-achievements/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/technical-achievements/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

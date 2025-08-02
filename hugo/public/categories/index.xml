@@ -50,5 +50,12 @@
       <guid>http://localhost:1313/categories/%E6%95%99%E7%A8%8B/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Technical Exploration</title>
+      <link>http://localhost:1313/categories/technical-exploration/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/technical-exploration/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
