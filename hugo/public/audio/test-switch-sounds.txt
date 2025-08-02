@@ -1,0 +1,17 @@
+TEST AUDIO FILE: test-switch-sounds.mp3
+
+This is a placeholder for the cockpit switch sounds audio file.
+In a real implementation, this would be an actual MP3 file containing:
+
+- Toggle switch clicks (0:00-0:30)
+- Push button sounds (0:30-0:60)
+- Rotary selector clicks (0:60-1:15)
+- Multi-position switch operations (1:15-1:45)
+
+Duration: 1:45
+Sample Rate: 44.1kHz
+Bit Depth: 24-bit
+Channels: Stereo
+
+Each sound would be recorded with high-quality microphones
+positioned to capture the mechanical characteristics accurately. 
