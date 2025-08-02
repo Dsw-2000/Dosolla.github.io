@@ -1,0 +1,13 @@
+{{ $videoId := .Get "id" }}
+{{ $width := .Get "width" | default "100%" }}
+{{ $height := .Get "height" | default "400px" }}
+
+<div class="video-container" style="margin: 2rem 0; position: relative; width: {{ $width }}; height: {{ $height }};">
+    <iframe
+        src="https://www.youtube.com/embed/{{ $videoId }}"
+        style="width: 100%; height: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</div> 

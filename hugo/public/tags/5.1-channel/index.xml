@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Technical Exploration on My New Hugo Site</title>
-    <link>http://localhost:1313/categories/technical-exploration/</link>
-    <description>Recent content in Technical Exploration on My New Hugo Site</description>
+    <title>5.1 Channel on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/5.1-channel/</link>
+    <description>Recent content in 5.1 Channel on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/technical-exploration/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/5.1-channel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Sound 5.1 Channel Film Production - Complete AI-Generated Audio Experience</title>
       <link>http://localhost:1313/researches/ai-sound-5-1-channel-film/</link>

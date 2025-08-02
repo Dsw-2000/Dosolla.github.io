@@ -65,7 +65,11 @@
             {{ range .Pages }}
             <div class="research-card">
                 <div class="research-image">
-                    <div class="research-placeholder"></div>
+                    {{ if .Params.image }}
+                        <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px 8px 0 0;">
+                    {{ else }}
+                        <div class="research-placeholder"></div>
+                    {{ end }}
                 </div>
                 <div class="research-content">
                     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
