@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Researches</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="nav-logo">
+                    <span class="logo-main">DOSOLLA</span>
+                    <span class="logo-subtitle">Sound Designer & Tech Explorer</span>
+                </a>
+            </div>
+            <div class="nav-center">
+                <a href="/about/" class="nav-link">About</a>
+                <a href="/online_reports/" class="nav-link">Online Reports</a>
+                <a href="/publications/" class="nav-link">Publications</a>
+                <a href="/researches/" class="nav-link active">Researches</a>
+                <a href="/box/" class="nav-link">BOX</a>
+            </div>
+            <div class="nav-right">
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 搜索框 -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by title, content, tags..." autocomplete="off">
+            <button class="search-close" id="searchClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h2>Researches</h2>
+            <div class="page-description">
+                <p>This page showcases my personal research projects and tool developments, including:</p>
+                <ul>
+                    <li>Design concepts</li>
+                    <li>Technical implementation</li>
+                    <li>Code details</li>
+                    <li>Usage instructions</li>
+                    <li>Final deliverables</li>
+                </ul>
+                <p>Feel free to explore, provide feedback, or collaborate.</p>
+            </div>
+        </div>
+        <div class="research-grid">
+            {{ range .Pages }}
+            <div class="research-card">
+                <div class="research-image">
+                    <div class="research-placeholder"></div>
+                </div>
+                <div class="research-content">
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p>{{ .Description }}</p>
+                    <div class="research-tags">
+                        {{ with .Params.tags }}
+                        {{ range . }}<span class="research-tag">{{ . }}</span>{{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    <script src="/js/fuse.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html> 

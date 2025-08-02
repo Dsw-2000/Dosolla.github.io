@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sound Design on My New Hugo Site</title>
+    <link>https://example.org/tags/sound-design/</link>
+    <description>Recent content in Sound Design on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/sound-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Blog: My Journey in Sound Design</title>
+      <link>https://example.org/online_reports/test-blog/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/online_reports/test-blog/</guid>
+      <description>&lt;h1 id=&#34;my-journey-in-sound-design&#34;&gt;My Journey in Sound Design&lt;/h1&gt;&#xA;&lt;p&gt;This is a test blog post to demonstrate the category filtering functionality.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;My journey in sound design began with a simple curiosity about how sounds shape our experiences in media.&lt;/p&gt;&#xA;&lt;h2 id=&#34;learning-and-growth&#34;&gt;Learning and Growth&lt;/h2&gt;&#xA;&lt;p&gt;Over the years, I&amp;rsquo;ve learned that sound design is not just about creating sounds, but about creating experiences.&lt;/p&gt;&#xA;&lt;h2 id=&#34;current-focus&#34;&gt;Current Focus&lt;/h2&gt;&#xA;&lt;p&gt;Today, I focus on aviation sound design and creating immersive audio experiences for flight simulation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test: Aviation Sound Design - Creating Immersive Cockpit Audio Experiences</title>
+      <link>https://example.org/online_reports/test-aviation-sound-design/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/online_reports/test-aviation-sound-design/</guid>
+      <description>&lt;h1 id=&#34;aviation-sound-design-creating-immersive-cockpit-audio-experiences&#34;&gt;Aviation Sound Design: Creating Immersive Cockpit Audio Experiences&lt;/h1&gt;&#xA;&lt;p&gt;The aviation industry has long recognized the critical importance of sound in pilot training and flight simulation. From the distinctive whine of turbine engines to the subtle clicks of cockpit switches, every audio element contributes to creating an authentic and immersive experience. This article explores the challenges and techniques involved in designing cockpit sounds for modern flight simulation systems.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-challenge-of-authenticity&#34;&gt;The Challenge of Authenticity&lt;/h2&gt;&#xA;&lt;p&gt;Creating authentic cockpit sounds presents unique challenges that differ significantly from traditional sound design projects. Unlike cinematic audio, aviation sound design must prioritize accuracy over aesthetics. Every sound must match the real-world counterpart precisely, as pilots rely on these audio cues for situational awareness and decision-making.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
