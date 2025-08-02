@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* 根变量 - 浅色模式 */
+/* 根变量 - 瑞士红白配色方案 */
 :root {
     --bg-primary: #ffffff;
     --bg-secondary: #fafafa;
@@ -13,15 +13,15 @@
     --text-primary: #1a1a1a;
     --text-secondary: #666666;
     --text-muted: #999999;
-    --accent-color: #2c3e50;
-    --accent-light: #34495e;
-    --forest-green: #8B0000;
-    --forest-green-light: #DC143C;
-    --forest-green-muted: #FF6347;
+    --accent-color: #E60000; /* 更深的瑞士红 */
+    --accent-light: #FF1A1A; /* 稍浅的瑞士红 */
+    --forest-green: #E60000; /* 更深的瑞士红 */
+    --forest-green-light: #FF1A1A; /* 稍浅的瑞士红 */
+    --forest-green-muted: #FF4040; /* 更浅的瑞士红 */
     --border-color: #e0e0e0;
     --border-light: #f0f0f0;
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow: 0 1px 3px rgba(230, 0, 0, 0.05);
+    --shadow-hover: 0 4px 12px rgba(230, 0, 0, 0.08);
     --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --font-weight-light: 200;
     --font-weight-normal: 300;
@@ -30,7 +30,7 @@
     --font-weight-bold: 600;
 }
 
-/* 深色模式变量 */
+/* 深色模式变量 - 保持瑞士红主题 */
 .dark-mode {
     --bg-primary: #1a1f1a;
     --bg-secondary: #2a2f2a;
@@ -38,15 +38,15 @@
     --text-primary: #ffffff;
     --text-secondary: #cccccc;
     --text-muted: #888888;
-    --accent-color: #3498db;
-    --accent-light: #5dade2;
-    --forest-green: #DC143C;
-    --forest-green-light: #FF6347;
-    --forest-green-muted: #FF8C69;
+    --accent-color: #E60000; /* 更深的瑞士红 */
+    --accent-light: #FF1A1A; /* 稍浅的瑞士红 */
+    --forest-green: #E60000; /* 更深的瑞士红 */
+    --forest-green-light: #FF1A1A; /* 稍浅的瑞士红 */
+    --forest-green-muted: #FF4040; /* 更浅的瑞士红 */
     --border-color: #3a3f3a;
     --border-light: #4a4f4a;
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow: 0 1px 3px rgba(230, 0, 0, 0.3);
+    --shadow-hover: 0 4px 12px rgba(230, 0, 0, 0.4);
 }
 
 /* 基础样式 */
@@ -373,7 +373,7 @@ body {
 
 @keyframes highlight {
     0% { background-color: var(--bg-secondary); }
-    50% { background-color: rgba(45, 80, 22, 0.1); }
+    50% { background-color: rgba(230, 0, 0, 0.1); }
     100% { background-color: var(--bg-secondary); }
 }
 
@@ -471,6 +471,7 @@ body {
     background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-green-light) 50%, var(--forest-green-muted) 100%);
     position: relative;
     animation: float 6s ease-in-out infinite;
+    box-shadow: 0 8px 32px rgba(230, 0, 0, 0.15);
 }
 
 .welcome-circle::before {
@@ -578,7 +579,7 @@ body {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--forest-green) 0%, var(--forest-green-light) 100%);
+    background: linear-gradient(90deg, #B30000 0%, #CC0000 25%, #E60000 50%, #FF1A1A 75%, #FF4040 100%);
     border-radius: 2px;
 }
 
@@ -709,8 +710,8 @@ body {
 
 #messageInput:focus {
     outline: none;
-    border-color: #81c784;
-    box-shadow: 0 0 0 2px rgba(129,199,132,0.1);
+    border-color: #E60000;
+    box-shadow: 0 0 0 2px rgba(230,0,0,0.1);
 }
 
 #messageInput::placeholder {
@@ -719,7 +720,7 @@ body {
 }
 
 .submit-btn {
-    background: #81c784;
+    background: #E60000;
     color: white;
     border: none;
     padding: 0.6rem 1.2rem;
@@ -732,8 +733,9 @@ body {
 }
 
 .submit-btn:hover {
-    background: #66bb6a;
+    background: #FF1A1A;
     transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(230, 0, 0, 0.3);
 }
 
 .messages-flow {
@@ -750,8 +752,8 @@ body {
 }
 
 .message-bubble.my-message {
-    background: #e8f5e8;
-    border: 1px solid #c8e6c9;
+    background: rgba(230, 0, 0, 0.05);
+    border: 1px solid rgba(230, 0, 0, 0.2);
     align-self: flex-end;
     margin-left: auto;
 }
@@ -763,7 +765,7 @@ body {
     top: 20px;
     width: 0;
     height: 0;
-    border-left: 8px solid #c8e6c9;
+    border-left: 8px solid rgba(230, 0, 0, 0.2);
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
 }
@@ -801,7 +803,7 @@ body {
 }
 
 .author-tag {
-    background: #81c784;
+    background: #E60000;
     color: white;
     padding: 0.2rem 0.6rem;
     border-radius: 12px;

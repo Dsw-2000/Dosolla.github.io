@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sound Design on My New Hugo Site</title>
-    <link>http://localhost:1313/tags/sound-design/</link>
+    <link>https://example.org/tags/sound-design/</link>
     <description>Recent content in Sound Design on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/sound-design/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/tags/sound-design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test Blog: My Journey in Sound Design</title>
-      <link>http://localhost:1313/online_reports/test-blog/</link>
+      <link>https://example.org/online_reports/test-blog/</link>
       <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/online_reports/test-blog/</guid>
+      <guid>https://example.org/online_reports/test-blog/</guid>
       <description>&lt;h1 id=&#34;my-journey-in-sound-design&#34;&gt;My Journey in Sound Design&lt;/h1&gt;&#xA;&lt;p&gt;This is a test blog post to demonstrate the category filtering functionality.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;My journey in sound design began with a simple curiosity about how sounds shape our experiences in media.&lt;/p&gt;&#xA;&lt;h2 id=&#34;learning-and-growth&#34;&gt;Learning and Growth&lt;/h2&gt;&#xA;&lt;p&gt;Over the years, I&amp;rsquo;ve learned that sound design is not just about creating sounds, but about creating experiences.&lt;/p&gt;&#xA;&lt;h2 id=&#34;current-focus&#34;&gt;Current Focus&lt;/h2&gt;&#xA;&lt;p&gt;Today, I focus on aviation sound design and creating immersive audio experiences for flight simulation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Test: Aviation Sound Design - Creating Immersive Cockpit Audio Experiences</title>
-      <link>http://localhost:1313/online_reports/test-aviation-sound-design/</link>
+      <link>https://example.org/online_reports/test-aviation-sound-design/</link>
       <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/online_reports/test-aviation-sound-design/</guid>
+      <guid>https://example.org/online_reports/test-aviation-sound-design/</guid>
       <description>&lt;h1 id=&#34;aviation-sound-design-creating-immersive-cockpit-audio-experiences&#34;&gt;Aviation Sound Design: Creating Immersive Cockpit Audio Experiences&lt;/h1&gt;&#xA;&lt;p&gt;The aviation industry has long recognized the critical importance of sound in pilot training and flight simulation. From the distinctive whine of turbine engines to the subtle clicks of cockpit switches, every audio element contributes to creating an authentic and immersive experience. This article explores the challenges and techniques involved in designing cockpit sounds for modern flight simulation systems.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-challenge-of-authenticity&#34;&gt;The Challenge of Authenticity&lt;/h2&gt;&#xA;&lt;p&gt;Creating authentic cockpit sounds presents unique challenges that differ significantly from traditional sound design projects. Unlike cinematic audio, aviation sound design must prioritize accuracy over aesthetics. Every sound must match the real-world counterpart precisely, as pilots rely on these audio cues for situational awareness and decision-making.&lt;/p&gt;</description>
     </item>
     <item>
       <title>&lt;Rs01&gt; LittleCommander - AI Sound Production</title>
-      <link>http://localhost:1313/researches/rs01_littlecommander/</link>
+      <link>https://example.org/researches/rs01_littlecommander/</link>
       <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/researches/rs01_littlecommander/</guid>
+      <guid>https://example.org/researches/rs01_littlecommander/</guid>
       <description>&lt;h2 id=&#34;littlecommander---ai-sound-production&#34;&gt;&lt;Rs01&gt; LittleCommander - AI Sound Production&lt;/h2&gt;&#xA;&lt;h3 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h3&gt;&#xA;&lt;p&gt;This research project demonstrates the complete integration of AI-generated sound in professional film production, creating a 5.1 channel short film entirely through artificial intelligence technologies.&lt;/p&gt;&#xA;&lt;h3 id=&#34;production-period&#34;&gt;Production Period&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;April 2024 - October 2024&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;technical-achievements&#34;&gt;Technical Achievements&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Complete AI Audio Generation&lt;/strong&gt;: All dialogue, sound effects, and ambient audio created using AI synthesis&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;5.1 Channel Mixing&lt;/strong&gt;: Professional surround sound implementation&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Seamless Integration&lt;/strong&gt;: AI-generated content seamlessly blended with visual elements&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Quality Standards&lt;/strong&gt;: Meeting broadcast and theatrical audio quality requirements&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;video-presentation&#34;&gt;Video Presentation&lt;/h3&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;div class=&#34;video-container&#34; style=&#34;margin: 2rem 0; position: relative; width: 100%; height: 500px;&#34;&gt;&#xA;    &lt;iframe&#xA;        src=&#34;https://www.youtube.com/embed/D0Fn8endlHQ&#34;&#xA;        style=&#34;width: 100%; height: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);&#34;&#xA;        frameborder=&#34;0&#34;&#xA;        allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34;&#xA;        allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;&lt;/div&gt; &#xA;&lt;h3 id=&#34;research-publication&#34;&gt;Research Publication&lt;/h3&gt;&#xA;&lt;p&gt;We have documented our findings on AI speech synthesis technology applications in film dialogue production in a peer-reviewed journal paper. The research paper has been published in &lt;em&gt;Modern Film Technology&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
