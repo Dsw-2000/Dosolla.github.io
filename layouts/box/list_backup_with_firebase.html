@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX - Message Board</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .box-bubble-content {
+            max-width: 600px;
+            margin: 3rem auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.07);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .box-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .box-title {
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--forest-green);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+        .box-subtitle {
+            font-size: 1.1rem;
+            color: #888;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .nickname-input, .comment-input {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            font-family: inherit;
+            background: #fafafa;
+            transition: border-color 0.2s;
+        }
+        .nickname-input:focus, .comment-input:focus {
+            outline: none;
+            border-color: var(--forest-green);
+        }
+        .submit-btn {
+            background: var(--forest-green);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            align-self: flex-end;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background: var(--forest-green-light);
+        }
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .comments-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .comments-header h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--forest-green);
+            margin: 0;
+        }
+        .comments-count {
+            color: #888;
+            font-size: 0.95rem;
+        }
+        .comments-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            max-height: 350px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+        .comment-bubble {
+            display: flex;
+            align-items: flex-end;
+            gap: 0.7rem;
+        }
+        .bubble {
+            background: linear-gradient(135deg, #f5f5f5 60%, #e8f5e8 100%);
+            border-radius: 18px 18px 18px 4px;
+            padding: 1rem 1.2rem;
+            min-width: 60px;
+            max-width: 400px;
+            font-size: 1rem;
+            color: #222;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+            position: relative;
+        }
+        .bubble-body {
+            font-size: 1.08rem;
+            font-weight: 500;
+            color: #222;
+            margin-bottom: 0.3rem;
+            word-break: break-all;
+        }
+        .bubble-footer {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 0.92rem;
+            color: #aaa;
+        }
+        .bubble-nickname {
+            color: #aaa;
+            font-weight: 400;
+            font-size: 0.92rem;
+        }
+        .bubble-nickname[data-guest="true"] {
+            font-style: italic;
+        }
+        .bubble-time { color: #ccc; }
+        .bubble-like { margin-left: auto; }
+        .bubble-like {
+            color: #aaa;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.2rem;
+            user-select: none;
+            transition: color 0.2s;
+        }
+        .bubble-like.liked {
+            color: #e74c3c;
+        }
+        .bubble-like:hover {
+            color: #c0392b;
+        }
+        .loading {
+            text-align: center;
+            color: #888;
+            padding: 2rem;
+        }
+        @media (max-width: 700px) {
+            .box-bubble-content { padding: 1rem; }
+            .bubble { max-width: 90vw; }
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="nav-logo">
+                    <span class="logo-main">DOSOLLA</span>
+                    <span class="logo-subtitle">Sound Designer & Tech Explorer</span>
+                </a>
+            </div>
+            <div class="nav-center">
+                <a href="/about/" class="nav-link">About</a>
+                <a href="/online_reports/" class="nav-link">Online Reports</a>
+                <a href="/publications/" class="nav-link">Publications</a>
+                <a href="/researches/" class="nav-link">Researches</a>
+                <a href="/box/" class="nav-link active">BOX</a>
+            </div>
+            <div class="nav-right">
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- 搜索框 -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by title, content, tags..." autocomplete="off">
+            <button class="search-close" id="searchClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+    <div class="box-bubble-content">
+        <div class="box-header">
+            <div class="box-title">BOX</div>
+            <div class="box-subtitle">An open space for all readers to freely share your thoughts, feedback, interests, and ideas for future content you'd like to see here.</div>
+        </div>
+        <form class="comment-form" id="commentForm">
+            <input type="text" class="nickname-input" id="nicknameInput" placeholder="Nickname (optional)">
+            <textarea class="comment-input" id="commentInput" placeholder="Write your comment..."></textarea>
+            <button type="submit" class="submit-btn" id="submitBtn">Post Comment</button>
+        </form>
+        <div class="comments-header">
+            <h3>Latest Comments</h3>
+            <span class="comments-count" id="commentsCount">0 comments</span>
+        </div>
+        <div class="comments-list" id="commentsList">
+            <div class="loading">Loading comments...</div>
+        </div>
+    </div>
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getDatabase, ref, push, onValue, set } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyA4jarIuRBBe1cgAUpADsK6Rw-4D6OgNJs",
+            authDomain: "dosolla-s-box.firebaseapp.com",
+            databaseURL: "https://dosolla-s-box-default-rtdb.firebaseio.com",
+            projectId: "dosolla-s-box",
+            storageBucket: "dosolla-s-box.firebasestorage.app",
+            messagingSenderId: "15884084765",
+            appId: "1:15884084765:web:54ef4d67046cb0fa5588f4",
+            measurementId: "G-N46KV67DRW"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // 获取DOM元素
+        const commentForm = document.getElementById('commentForm');
+        const nicknameInput = document.getElementById('nicknameInput');
+        const commentInput = document.getElementById('commentInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const commentsList = document.getElementById('commentsList');
+        const commentsCount = document.getElementById('commentsCount');
+
+        // 获取时间差
+        function getTimeAgo(date) {
+            const now = new Date();
+            const diff = Math.floor((now - date) / 1000);
+            if (diff < 60) return 'just now';
+            if (diff < 3600) return Math.floor(diff/60) + ' min ago';
+            if (diff < 86400) return Math.floor(diff/3600) + ' hr ago';
+            return date.toLocaleDateString();
+        }
+
+        // 渲染评论
+        function renderComments(comments) {
+            commentsList.innerHTML = '';
+            commentsCount.textContent = comments.length + (comments.length === 1 ? ' comment' : ' comments');
+            
+            if (comments.length === 0) {
+                commentsList.innerHTML = '<div class="loading">No comments yet. Be the first to comment!</div>';
+                return;
+            }
+
+            comments.forEach((comment, index) => {
+                const bubble = document.createElement('div');
+                bubble.className = 'comment-bubble';
+                bubble.innerHTML = `
+                    <div class="bubble">
+                        <div class="bubble-body">${comment.content.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>
+                        <div class="bubble-footer">
+                            <span class="bubble-nickname" data-guest="${!comment.nickname || comment.nickname==='Guest'}">${comment.nickname && comment.nickname!=='Guest' ? comment.nickname : 'Guest'}</span>
+                            <span class="bubble-time">${getTimeAgo(new Date(comment.time))}</span>
+                            <span class="bubble-like${comment.liked ? ' liked' : ''}" data-id="${comment.id}">
+                                <i class="fa fa-heart"></i> <span>${comment.likes||0}</span>
+                            </span>
+                        </div>
+                    </div>
+                `;
+                commentsList.appendChild(bubble);
+            });
+
+            // 自动滚动到底部
+            commentsList.scrollTop = commentsList.scrollHeight;
+
+            // 绑定点赞事件
+            document.querySelectorAll('.bubble-like').forEach(el => {
+                el.onclick = function() {
+                    const commentId = this.getAttribute('data-id');
+                    const commentRef = ref(database, 'comments/' + commentId);
+                    
+                    // 简单的点赞逻辑（这里可以优化为更复杂的用户认证）
+                    const currentLikes = parseInt(this.querySelector('span').textContent) || 0;
+                    const isLiked = this.classList.contains('liked');
+                    
+                    set(ref(database, 'comments/' + commentId + '/likes'), isLiked ? currentLikes - 1 : currentLikes + 1);
+                    set(ref(database, 'comments/' + commentId + '/liked'), !isLiked);
+                };
+            });
+        }
+
+        // 监听评论变化
+        const commentsRef = ref(database, 'comments');
+        onValue(commentsRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                const comments = Object.keys(data).map(key => ({
+                    id: key,
+                    ...data[key]
+                })).sort((a, b) => new Date(a.time) - new Date(b.time));
+                renderComments(comments);
+            } else {
+                renderComments([]);
+            }
+        });
+
+        // 提交评论
+        commentForm.onsubmit = function(e) {
+            e.preventDefault();
+            
+            const nickname = nicknameInput.value.trim() || 'Guest';
+            const content = commentInput.value.trim();
+            
+            if (!content) {
+                alert('Please enter your comment.');
+                return;
+            }
+
+            // 禁用提交按钮
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Posting...';
+
+            // 添加评论到Firebase
+            const newCommentRef = push(commentsRef);
+            set(newCommentRef, {
+                nickname: nickname,
+                content: content,
+                time: new Date().toISOString(),
+                likes: 0,
+                liked: false
+            }).then(() => {
+                // 清空输入框
+                commentInput.value = '';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Post Comment';
+            }).catch((error) => {
+                console.error('Error adding comment:', error);
+                alert('Error posting comment. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Post Comment';
+            });
+        };
+    </script>
+    
+    <script src="/js/fuse.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html> 
