@@ -1,366 +1,70 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>教程：航空航天文章Markdown语法指南 - SiLi Ding</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body class="light-mode single-page">
-    
-    
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="/" class="nav-logo">
-                    <span class="logo-main">DOSOLLA</span>
-                    <span class="logo-subtitle">Sound Designer & Tech Explorer</span>
-                </a>
-            </div>
-            <div class="nav-center">
-                <a href="/about/" class="nav-link">About</a>
-                <a href="/online_reports/" class="nav-link ">Online Reports</a>
-                <a href="/publications/" class="nav-link ">Publications</a>
-                <a href="/researches/" class="nav-link ">Researches</a>
-                <a href="/box/" class="nav-link ">BOX</a>
-            </div>
-            <div class="nav-right">
-                <button class="search-btn" id="searchBtn">
-                    <i class="fas fa-search"></i>
-                </button>
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-    
-    <div class="search-overlay" id="searchOverlay">
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search by title, content, tags..." autocomplete="off">
-            <button class="search-close" id="searchClose">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="search-results" id="searchResults"></div>
-        </div>
-    </div>
-    
-    <main class="main-content">
-        <div class="container">
-            <article class="article-content">
-                <a href="//" class="back-to-reports">
-                    <i class="fas fa-arrow-left"></i> 
-                    Back
-                </a>
-                <header class="article-header">
-                    <h1 class="article-title">教程：航空航天文章Markdown语法指南</h1>
-                    
-                    <p class="article-description">航空航天和太空探索主题的Markdown语法完整指南</p>
-                    
-                    <div class="article-meta">
-                        <span class="article-date"><i class="fas fa-calendar-alt"></i> 2025年1月27日</span>
-                        
-                        <span class="article-category"><i class="fas fa-folder"></i> 教程</span>
-                        
-                        
-                        <span class="article-reading-time"><i class="fas fa-clock"></i> 10分钟</span>
-                        
-                    </div>
-                    
-                    <div class="article-tags">
-                        
-                        <span class="article-tag">#教程</span>
-                        
-                        <span class="article-tag">#Markdown</span>
-                        
-                        <span class="article-tag">#航空航天</span>
-                        
-                        <span class="article-tag">#太空</span>
-                        
-                        <span class="article-tag">#写作指南</span>
-                        
-                    </div>
-                    
-                </header>
-                <div class="article-body">
-                    <h1 id="航空航天文章markdown语法教程">航空航天文章Markdown语法教程</h1>
-<p>本教程提供了完整的Markdown语法指南，专门针对航空航天和太空探索文章。在撰写技术文章时，请将此作为参考。</p>
-<h2 id="文字格式化">文字格式化</h2>
-<h3 id="基本文字样式">基本文字样式</h3>
-<p><strong>粗体文字</strong>用于强调重要概念，如<strong>轨道力学</strong>和<strong>推进系统</strong>。</p>
-<p><em>斜体文字</em>非常适合突出术语，如<em>推重比</em>和<em>比冲</em>。</p>
-<p><em><strong>粗体加斜体</strong></em>可以组合使用，用于<em><strong>关键安全参数</strong></em>。</p>
-<h3 id="删除线和下划线">删除线和下划线</h3>
-<p><del>删除线</del>用于显示过时信息，如<del>阿波罗11号是第一次载人任务</del>（实际上，它是第一次登月任务）。</p>
-<p><u>下划线文字</u>可以强调重要警告或注释。</p>
-<h2 id="标题和结构">标题和结构</h2>
-<h1 id="h1---文章主标题">H1 - 文章主标题</h1>
-<h2 id="h2---主要章节">H2 - 主要章节</h2>
-<h3 id="h3---子章节">H3 - 子章节</h3>
-<h4 id="h4---小章节">H4 - 小章节</h4>
-<h5 id="h5---微小章节">H5 - 微小章节</h5>
-<h6 id="h6---最小章节">H6 - 最小章节</h6>
-<h2 id="列表">列表</h2>
-<h3 id="无序列表">无序列表</h3>
-<ul>
-<li><strong>火箭推进系统</strong>
-<ul>
-<li>液体燃料发动机</li>
-<li>固体火箭助推器</li>
-<li>混合推进</li>
-<li>电推进</li>
-</ul>
-</li>
-</ul>
-<h3 id="有序列表">有序列表</h3>
-<ol>
-<li><strong>太空任务阶段</strong>
-<ol>
-<li>发射准备</li>
-<li>上升阶段</li>
-<li>轨道插入</li>
-<li>任务执行</li>
-<li>再入和着陆</li>
-</ol>
-</li>
-</ol>
-<h3 id="混合列表">混合列表</h3>
-<ul>
-<li><strong>飞机系统</strong>
-<ol>
-<li>航空电子设备</li>
-<li>飞行控制系统</li>
-<li>电源分配</li>
-</ol>
-</li>
-<li><strong>航天器组件</strong>
-<ol>
-<li>生命保障系统</li>
-<li>通信阵列</li>
-<li>热管理系统</li>
-</ol>
-</li>
-</ul>
-<h2 id="链接和引用">链接和引用</h2>
-<h3 id="基本链接">基本链接</h3>
-<p>访问<a href="https://www.nasa.gov">NASA官方网站</a>了解最新太空任务。</p>
-<h3 id="带标题的链接">带标题的链接</h3>
-<p>查看<a href="https://www.nasa.gov/station" title="ISS - 人类在太空的家">国际空间站</a>获取实时更新。</p>
-<h3 id="内部链接">内部链接</h3>
-<p>阅读我们关于<a href="/online_reports/test-aviation-sound-design/">航空声音设计</a>的文章获取相关内容。</p>
-<h2 id="图片">图片</h2>
-<h3 id="基本图片">基本图片</h3>
-<p><img src="/image/IMG_5998.JPG" alt="地球轨道卫星"></p>
-<p><em>图1：绕地球运行的卫星，展示轨道力学</em></p>
-<h2 id="音频和多媒体">音频和多媒体</h2>
-<h3 id="音频播放器">音频播放器</h3>
-<audio controls style="width: 100%; margin: 1rem 0;">
-  <source src="/audio/Noisy Insects Dia  - Original.wav" type="audio/wav">
-  您的浏览器不支持音频元素。
-</audio>
-<p><em>音频：火箭发动机点火序列</em></p>
-<h3 id="多源音频">多源音频</h3>
-<audio controls style="width: 100%; margin: 1rem 0;">
-  <source src="/audio/Noisy Insects Dia  - Original.wav" type="audio/wav">
-  <source src="/audio/Noisy Insects Dia  - Original.wav" type="audio/mpeg">
-  您的浏览器不支持音频元素。
-</audio>
-<h2 id="代码和技术内容">代码和技术内容</h2>
-<h3 id="内联代码">内联代码</h3>
-<p>使用 <code>calculateOrbitalVelocity()</code> 函数确定航天器速度。</p>
-<h3 id="代码块">代码块</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate_orbital_velocity</span>(altitude, planet_mass, planet_radius):
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    使用牛顿万有引力定律计算轨道速度
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>    G <span style="color:#f92672">=</span> <span style="color:#ae81ff">6.67430e-11</span>  <span style="color:#75715e"># 万有引力常数</span>
-</span></span><span style="display:flex;"><span>    r <span style="color:#f92672">=</span> planet_radius <span style="color:#f92672">+</span> altitude
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    velocity <span style="color:#f92672">=</span> (G <span style="color:#f92672">*</span> planet_mass <span style="color:#f92672">/</span> r) <span style="color:#f92672">**</span> <span style="color:#ae81ff">0.5</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> velocity
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用示例</span>
-</span></span><span style="display:flex;"><span>earth_mass <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.972e24</span>  <span style="color:#75715e"># kg</span>
-</span></span><span style="display:flex;"><span>earth_radius <span style="color:#f92672">=</span> <span style="color:#ae81ff">6.371e6</span>  <span style="color:#75715e"># m</span>
-</span></span><span style="display:flex;"><span>leo_altitude <span style="color:#f92672">=</span> <span style="color:#ae81ff">400e3</span>    <span style="color:#75715e"># m (400 km)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>leo_velocity <span style="color:#f92672">=</span> calculate_orbital_velocity(leo_altitude, earth_mass, earth_radius)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;低地球轨道速度: </span><span style="color:#e6db74">{</span>leo_velocity<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> m/s&#34;</span>)
-</span></span></code></pre></div><h3 id="javascript示例">JavaScript示例</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 航天器轨迹计算
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TrajectoryCalculator</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">initialPosition</span>, <span style="color:#a6e22e">initialVelocity</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">position</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">initialPosition</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">velocity</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">initialVelocity</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">gravity</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.81</span>; <span style="color:#75715e">// m/s²
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">updatePosition</span>(<span style="color:#a6e22e">deltaTime</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 简单物理模拟
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">velocity</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">-=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">gravity</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">deltaTime</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">position</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">+=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">velocity</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">deltaTime</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">position</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">+=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">velocity</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">deltaTime</span>;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">position</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="html示例">HTML示例</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 太空任务状态显示 --&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mission-status&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h3</span>&gt;任务: 阿耳忒弥斯II&lt;/<span style="color:#f92672">h3</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;status-indicator&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;status active&#34;</span>&gt;进行中&lt;/<span style="color:#f92672">span</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;crew&#34;</span>&gt;机组: 4名宇航员&lt;/<span style="color:#f92672">span</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;duration&#34;</span>&gt;持续时间: 10天&lt;/<span style="color:#f92672">span</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">audio</span> <span style="color:#a6e22e">controls</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/audio/mission-communications.wav&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio/wav&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">audio</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
-</span></span></code></pre></div><h2 id="引用和引述">引用和引述</h2>
-<h3 id="简单引用">简单引用</h3>
-<blockquote>
-<p>&ldquo;这是个人的一小步，却是人类的一大步。&rdquo;</p>
-<p>— 尼尔·阿姆斯特朗，阿波罗11号</p></blockquote>
-<h3 id="嵌套引用">嵌套引用</h3>
-<blockquote>
-<p><strong>任务控制中心</strong>: &ldquo;休斯顿，我们遇到了问题。&rdquo;</p>
-<blockquote>
-<p><strong>阿波罗13号机组</strong>: &ldquo;我们需要节省电力和氧气。&rdquo;</p>
-<blockquote>
-<p><strong>飞行主任</strong>: &ldquo;让我们解决问题，伙计们。&rdquo;</p></blockquote></blockquote></blockquote>
-<h3 id="技术引用">技术引用</h3>
-<blockquote>
-<p><strong>轨道力学原理</strong>:
-卫星的轨道速度与其轨道半径的平方根成反比。这个基本关系支配着太空中所有航天器的轨迹。</p></blockquote>
-<h2 id="表格">表格</h2>
-<h3 id="基本表格">基本表格</h3>
-<table>
-  <thead>
-      <tr>
-          <th>组件</th>
-          <th>质量 (kg)</th>
-          <th>功能</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>推进模块</td>
-          <td>2,500</td>
-          <td>主发动机和燃料</td>
-      </tr>
-      <tr>
-          <td>指令模块</td>
-          <td>1,200</td>
-          <td>机组舱室和控制</td>
-      </tr>
-      <tr>
-          <td>服务模块</td>
-          <td>800</td>
-          <td>生命保障和电源</td>
-      </tr>
-      <tr>
-          <td>登月模块</td>
-          <td>1,600</td>
-          <td>月球着陆和上升</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="复杂表格">复杂表格</h3>
-<table>
-  <thead>
-      <tr>
-          <th>任务</th>
-          <th>发射日期</th>
-          <th>持续时间</th>
-          <th>机组</th>
-          <th>状态</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>阿波罗11号</td>
-          <td>1969年7月16日</td>
-          <td>8天</td>
-          <td>3人</td>
-          <td>✅ 已完成</td>
-      </tr>
-      <tr>
-          <td>阿波罗13号</td>
-          <td>1970年4月11日</td>
-          <td>6天</td>
-          <td>3人</td>
-          <td>⚠️ 中止</td>
-      </tr>
-      <tr>
-          <td>阿耳忒弥斯I</td>
-          <td>2022年11月16日</td>
-          <td>25天</td>
-          <td>0人</td>
-          <td>✅ 已完成</td>
-      </tr>
-      <tr>
-          <td>阿耳忒弥斯II</td>
-          <td>2025年</td>
-          <td>10天</td>
-          <td>4人</td>
-          <td>🚀 计划中</td>
-      </tr>
-  </tbody>
-</table>
-<h2 id="数学表达式">数学表达式</h2>
-<h3 id="内联数学">内联数学</h3>
-<p>火箭方程是：<code>Δv = v_e * ln(m_0/m_f)</code></p>
-<h3 id="块级数学">块级数学</h3>
-<p>轨道周期可以使用以下公式计算：</p>
-<pre tabindex="0"><code>T = 2π * √(a³/μ)
-</code></pre><p>其中：</p>
-<ul>
-<li>T = 轨道周期</li>
-<li>a = 半长轴</li>
-<li>μ = 引力参数</li>
-</ul>
-<h2 id="任务列表">任务列表</h2>
-<h3 id="任务检查清单">任务检查清单</h3>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 飞行前系统检查</li>
-<li><input checked="" disabled="" type="checkbox"> 机组体检</li>
-<li><input checked="" disabled="" type="checkbox"> 天气评估</li>
-<li><input disabled="" type="checkbox"> 最终倒计时序列</li>
-<li><input disabled="" type="checkbox"> 发射窗口验证</li>
-<li><input disabled="" type="checkbox"> 任务中止程序审查</li>
-</ul>
-<h3 id="开发任务">开发任务</h3>
-<ul>
-<li><input disabled="" type="checkbox"> 设计推进系统</li>
-<li><input disabled="" type="checkbox"> 测试热防护</li>
-<li><input disabled="" type="checkbox"> 验证生命保障</li>
-<li><input disabled="" type="checkbox"> 集成航空电子设备</li>
-<li><input disabled="" type="checkbox"> 进行安全审查</li>
-</ul>
-<h2 id="水平分割线">水平分割线</h2>
-<p>使用水平分割线分隔主要章节：</p>
-<hr>
-<h2 id="高级格式化">高级格式化</h2>
-<h3 id="定义列表">定义列表</h3>
-<dl>
-<dt><strong>远地点</strong></dt>
-<dd>轨道上距离地球最远的点。</dd>
-<dt><strong>近地点</strong></dt>
-<dd>轨道上距离地球最近的点。</dd>
-<dt><strong>比冲</strong></dt>
-<dd>火箭发动机效率的度量，以秒为单位。</dd>
-</dl>
-<h3 id="脚注">脚注</h3>
-<p>土星五号火箭<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>仍然是人类建造的最强大的火箭。</p>
-<h3 id="缩写">缩写</h3>
-<p><abbr title="美国国家航空航天局">NASA</abbr>领导太空探索工作。</p>
-<p><abbr title="国际空间站">ISS</abbr>在400公里高度绕地球运行。</p>
-<h2 id="最佳实践">最佳实践</h2>
-<h3 id="文件组织">文件组织</h3>
-<pre tabindex="0"><code>content/online_reports/
+<!doctype html><html lang=zh-CN><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>教程：航空航天文章Markdown语法指南 - SiLi Ding</title><link rel=stylesheet href=/css/styles.css><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css></head><body class="light-mode single-page"><nav class=navbar><div class=nav-container><div class=nav-left><a href=/ class=nav-logo><span class=logo-main>DOSOLLA</span>
+<span class=logo-subtitle>Sound Designer & Tech Explorer</span></a></div><div class=nav-center><a href=/about/ class=nav-link>About</a>
+<a href=/online_reports/ class=nav-link>Online Reports</a>
+<a href=/publications/ class=nav-link>Publications</a>
+<a href=/researches/ class=nav-link>Researches</a>
+<a href=/box/ class=nav-link>BOX</a></div><div class=nav-right><button class=search-btn id=searchBtn>
+<i class="fas fa-search"></i>
+</button>
+<button class=theme-toggle id=themeToggle>
+<i class="fas fa-moon"></i></button></div></div></nav><div class=search-overlay id=searchOverlay><div class=search-container><input type=text id=searchInput placeholder="Search by title, content, tags..." autocomplete=off>
+<button class=search-close id=searchClose>
+<i class="fas fa-times"></i></button><div class=search-results id=searchResults></div></div></div><main class=main-content><div class=container><article class=article-content><a href=// class=back-to-reports><i class="fas fa-arrow-left"></i>
+Back</a><header class=article-header><h1 class=article-title>教程：航空航天文章Markdown语法指南</h1><p class=article-description>航空航天和太空探索主题的Markdown语法完整指南</p><div class=article-meta><span class=article-date><i class="fas fa-calendar-alt"></i> 2025年1月27日</span>
+<span class=article-category><i class="fas fa-folder"></i> 教程</span>
+<span class=article-reading-time><i class="fas fa-clock"></i> 10分钟</span></div><div class=article-tags><span class=article-tag>#教程</span>
+<span class=article-tag>#Markdown</span>
+<span class=article-tag>#航空航天</span>
+<span class=article-tag>#太空</span>
+<span class=article-tag>#写作指南</span></div></header><div class=article-body><h1 id=航空航天文章markdown语法教程>航空航天文章Markdown语法教程</h1><p>本教程提供了完整的Markdown语法指南，专门针对航空航天和太空探索文章。在撰写技术文章时，请将此作为参考。</p><h2 id=文字格式化>文字格式化</h2><h3 id=基本文字样式>基本文字样式</h3><p><strong>粗体文字</strong>用于强调重要概念，如<strong>轨道力学</strong>和<strong>推进系统</strong>。</p><p><em>斜体文字</em>非常适合突出术语，如<em>推重比</em>和<em>比冲</em>。</p><p><em><strong>粗体加斜体</strong></em>可以组合使用，用于<em><strong>关键安全参数</strong></em>。</p><h3 id=删除线和下划线>删除线和下划线</h3><p><del>删除线</del>用于显示过时信息，如<del>阿波罗11号是第一次载人任务</del>（实际上，它是第一次登月任务）。</p><p><u>下划线文字</u>可以强调重要警告或注释。</p><h2 id=标题和结构>标题和结构</h2><h1 id=h1---文章主标题>H1 - 文章主标题</h1><h2 id=h2---主要章节>H2 - 主要章节</h2><h3 id=h3---子章节>H3 - 子章节</h3><h4 id=h4---小章节>H4 - 小章节</h4><h5 id=h5---微小章节>H5 - 微小章节</h5><h6 id=h6---最小章节>H6 - 最小章节</h6><h2 id=列表>列表</h2><h3 id=无序列表>无序列表</h3><ul><li><strong>火箭推进系统</strong><ul><li>液体燃料发动机</li><li>固体火箭助推器</li><li>混合推进</li><li>电推进</li></ul></li></ul><h3 id=有序列表>有序列表</h3><ol><li><strong>太空任务阶段</strong><ol><li>发射准备</li><li>上升阶段</li><li>轨道插入</li><li>任务执行</li><li>再入和着陆</li></ol></li></ol><h3 id=混合列表>混合列表</h3><ul><li><strong>飞机系统</strong><ol><li>航空电子设备</li><li>飞行控制系统</li><li>电源分配</li></ol></li><li><strong>航天器组件</strong><ol><li>生命保障系统</li><li>通信阵列</li><li>热管理系统</li></ol></li></ul><h2 id=链接和引用>链接和引用</h2><h3 id=基本链接>基本链接</h3><p>访问<a href=https://www.nasa.gov>NASA官方网站</a>了解最新太空任务。</p><h3 id=带标题的链接>带标题的链接</h3><p>查看<a href=https://www.nasa.gov/station title="ISS - 人类在太空的家">国际空间站</a>获取实时更新。</p><h3 id=内部链接>内部链接</h3><p>阅读我们关于<a href=/online_reports/test-aviation-sound-design/>航空声音设计</a>的文章获取相关内容。</p><h2 id=图片>图片</h2><h3 id=基本图片>基本图片</h3><p><img src=/image/IMG_5998.JPG alt=地球轨道卫星></p><p><em>图1：绕地球运行的卫星，展示轨道力学</em></p><h2 id=音频和多媒体>音频和多媒体</h2><h3 id=音频播放器>音频播放器</h3><audio controls style="width:100%;margin:1rem 0"><source src="/audio/Noisy Insects Dia  - Original.wav" type=audio/wav>您的浏览器不支持音频元素。</audio><p><em>音频：火箭发动机点火序列</em></p><h3 id=多源音频>多源音频</h3><audio controls style="width:100%;margin:1rem 0"><source src="/audio/Noisy Insects Dia  - Original.wav" type=audio/wav><source src="/audio/Noisy Insects Dia  - Original.wav" type=audio/mpeg>您的浏览器不支持音频元素。</audio><h2 id=代码和技术内容>代码和技术内容</h2><h3 id=内联代码>内联代码</h3><p>使用 <code>calculateOrbitalVelocity()</code> 函数确定航天器速度。</p><h3 id=代码块>代码块</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>calculate_orbital_velocity</span>(altitude, planet_mass, planet_radius):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    使用牛顿万有引力定律计算轨道速度
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    G <span style=color:#f92672>=</span> <span style=color:#ae81ff>6.67430e-11</span>  <span style=color:#75715e># 万有引力常数</span>
+</span></span><span style=display:flex><span>    r <span style=color:#f92672>=</span> planet_radius <span style=color:#f92672>+</span> altitude
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    velocity <span style=color:#f92672>=</span> (G <span style=color:#f92672>*</span> planet_mass <span style=color:#f92672>/</span> r) <span style=color:#f92672>**</span> <span style=color:#ae81ff>0.5</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> velocity
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 使用示例</span>
+</span></span><span style=display:flex><span>earth_mass <span style=color:#f92672>=</span> <span style=color:#ae81ff>5.972e24</span>  <span style=color:#75715e># kg</span>
+</span></span><span style=display:flex><span>earth_radius <span style=color:#f92672>=</span> <span style=color:#ae81ff>6.371e6</span>  <span style=color:#75715e># m</span>
+</span></span><span style=display:flex><span>leo_altitude <span style=color:#f92672>=</span> <span style=color:#ae81ff>400e3</span>    <span style=color:#75715e># m (400 km)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>leo_velocity <span style=color:#f92672>=</span> calculate_orbital_velocity(leo_altitude, earth_mass, earth_radius)
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;低地球轨道速度: </span><span style=color:#e6db74>{</span>leo_velocity<span style=color:#e6db74>:</span><span style=color:#e6db74>.0f</span><span style=color:#e6db74>}</span><span style=color:#e6db74> m/s&#34;</span>)
+</span></span></code></pre></div><h3 id=javascript示例>JavaScript示例</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#75715e>// 航天器轨迹计算
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>TrajectoryCalculator</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>initialPosition</span>, <span style=color:#a6e22e>initialVelocity</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>initialPosition</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>velocity</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>initialVelocity</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>gravity</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>9.81</span>; <span style=color:#75715e>// m/s²
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>updatePosition</span>(<span style=color:#a6e22e>deltaTime</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 简单物理模拟
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>velocity</span>.<span style=color:#a6e22e>y</span> <span style=color:#f92672>-=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>gravity</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>deltaTime</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span>.<span style=color:#a6e22e>x</span> <span style=color:#f92672>+=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>velocity</span>.<span style=color:#a6e22e>x</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>deltaTime</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span>.<span style=color:#a6e22e>y</span> <span style=color:#f92672>+=</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>velocity</span>.<span style=color:#a6e22e>y</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>deltaTime</span>;
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>position</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=html示例>HTML示例</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#75715e>&lt;!-- 太空任务状态显示 --&gt;</span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;mission-status&#34;</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>h3</span>&gt;任务: 阿耳忒弥斯II&lt;/<span style=color:#f92672>h3</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;status-indicator&#34;</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>span</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;status active&#34;</span>&gt;进行中&lt;/<span style=color:#f92672>span</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>span</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;crew&#34;</span>&gt;机组: 4名宇航员&lt;/<span style=color:#f92672>span</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>span</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;duration&#34;</span>&gt;持续时间: 10天&lt;/<span style=color:#f92672>span</span>&gt;
+</span></span><span style=display:flex><span>    &lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>audio</span> <span style=color:#a6e22e>controls</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>source</span> <span style=color:#a6e22e>src</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/audio/mission-communications.wav&#34;</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;audio/wav&#34;</span>&gt;
+</span></span><span style=display:flex><span>    &lt;/<span style=color:#f92672>audio</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>div</span>&gt;
+</span></span></code></pre></div><h2 id=引用和引述>引用和引述</h2><h3 id=简单引用>简单引用</h3><blockquote><p>&ldquo;这是个人的一小步，却是人类的一大步。&rdquo;</p><p>— 尼尔·阿姆斯特朗，阿波罗11号</p></blockquote><h3 id=嵌套引用>嵌套引用</h3><blockquote><p><strong>任务控制中心</strong>: &ldquo;休斯顿，我们遇到了问题。&rdquo;</p><blockquote><p><strong>阿波罗13号机组</strong>: &ldquo;我们需要节省电力和氧气。&rdquo;</p><blockquote><p><strong>飞行主任</strong>: &ldquo;让我们解决问题，伙计们。&rdquo;</p></blockquote></blockquote></blockquote><h3 id=技术引用>技术引用</h3><blockquote><p><strong>轨道力学原理</strong>:
+卫星的轨道速度与其轨道半径的平方根成反比。这个基本关系支配着太空中所有航天器的轨迹。</p></blockquote><h2 id=表格>表格</h2><h3 id=基本表格>基本表格</h3><table><thead><tr><th>组件</th><th>质量 (kg)</th><th>功能</th></tr></thead><tbody><tr><td>推进模块</td><td>2,500</td><td>主发动机和燃料</td></tr><tr><td>指令模块</td><td>1,200</td><td>机组舱室和控制</td></tr><tr><td>服务模块</td><td>800</td><td>生命保障和电源</td></tr><tr><td>登月模块</td><td>1,600</td><td>月球着陆和上升</td></tr></tbody></table><h3 id=复杂表格>复杂表格</h3><table><thead><tr><th>任务</th><th>发射日期</th><th>持续时间</th><th>机组</th><th>状态</th></tr></thead><tbody><tr><td>阿波罗11号</td><td>1969年7月16日</td><td>8天</td><td>3人</td><td>✅ 已完成</td></tr><tr><td>阿波罗13号</td><td>1970年4月11日</td><td>6天</td><td>3人</td><td>⚠️ 中止</td></tr><tr><td>阿耳忒弥斯I</td><td>2022年11月16日</td><td>25天</td><td>0人</td><td>✅ 已完成</td></tr><tr><td>阿耳忒弥斯II</td><td>2025年</td><td>10天</td><td>4人</td><td>🚀 计划中</td></tr></tbody></table><h2 id=数学表达式>数学表达式</h2><h3 id=内联数学>内联数学</h3><p>火箭方程是：<code>Δv = v_e * ln(m_0/m_f)</code></p><h3 id=块级数学>块级数学</h3><p>轨道周期可以使用以下公式计算：</p><pre tabindex=0><code>T = 2π * √(a³/μ)
+</code></pre><p>其中：</p><ul><li>T = 轨道周期</li><li>a = 半长轴</li><li>μ = 引力参数</li></ul><h2 id=任务列表>任务列表</h2><h3 id=任务检查清单>任务检查清单</h3><ul><li><input checked disabled type=checkbox> 飞行前系统检查</li><li><input checked disabled type=checkbox> 机组体检</li><li><input checked disabled type=checkbox> 天气评估</li><li><input disabled type=checkbox> 最终倒计时序列</li><li><input disabled type=checkbox> 发射窗口验证</li><li><input disabled type=checkbox> 任务中止程序审查</li></ul><h3 id=开发任务>开发任务</h3><ul><li><input disabled type=checkbox> 设计推进系统</li><li><input disabled type=checkbox> 测试热防护</li><li><input disabled type=checkbox> 验证生命保障</li><li><input disabled type=checkbox> 集成航空电子设备</li><li><input disabled type=checkbox> 进行安全审查</li></ul><h2 id=水平分割线>水平分割线</h2><p>使用水平分割线分隔主要章节：</p><hr><h2 id=高级格式化>高级格式化</h2><h3 id=定义列表>定义列表</h3><dl><dt><strong>远地点</strong></dt><dd>轨道上距离地球最远的点。</dd><dt><strong>近地点</strong></dt><dd>轨道上距离地球最近的点。</dd><dt><strong>比冲</strong></dt><dd>火箭发动机效率的度量，以秒为单位。</dd></dl><h3 id=脚注>脚注</h3><p>土星五号火箭<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>仍然是人类建造的最强大的火箭。</p><h3 id=缩写>缩写</h3><p><abbr title=美国国家航空航天局>NASA</abbr>领导太空探索工作。</p><p><abbr title=国际空间站>ISS</abbr>在400公里高度绕地球运行。</p><h2 id=最佳实践>最佳实践</h2><h3 id=文件组织>文件组织</h3><pre tabindex=0><code>content/online_reports/
 ├── your-article.md
 ├── another-article.md
 └── tutorial.md
@@ -372,84 +76,4 @@ static/
 └── audio/
     ├── engine-sound.wav
     └── communications.mp3
-</code></pre><h3 id="命名规范">命名规范</h3>
-<ul>
-<li><strong>文章</strong>: 使用kebab-case (<code>space-propulsion-systems.md</code>)</li>
-<li><strong>图片</strong>: 使用描述性名称 (<code>saturn-v-launch.jpg</code>)</li>
-<li><strong>音频</strong>: 使用清晰标识符 (<code>rocket-engine-startup.wav</code>)</li>
-</ul>
-<h3 id="内容结构">内容结构</h3>
-<ol>
-<li><strong>引言</strong> - 吸引读者</li>
-<li><strong>技术背景</strong> - 提供上下文</li>
-<li><strong>主要内容</strong> - 详细解释</li>
-<li><strong>示例</strong> - 实际应用</li>
-<li><strong>结论</strong> - 总结和下一步</li>
-</ol>
-<hr>
-<h2 id="快速参考">快速参考</h2>
-<table>
-  <thead>
-      <tr>
-          <th>元素</th>
-          <th>语法</th>
-          <th>示例</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>粗体</td>
-          <td><code>**text**</code></td>
-          <td><strong>重要</strong></td>
-      </tr>
-      <tr>
-          <td>斜体</td>
-          <td><code>*text*</code></td>
-          <td><em>强调</em></td>
-      </tr>
-      <tr>
-          <td>链接</td>
-          <td><code>[text](url)</code></td>
-          <td><a href="https://nasa.gov">NASA</a></td>
-      </tr>
-      <tr>
-          <td>图片</td>
-          <td><code>![alt](path)</code></td>
-          <td><img src="/image/rocket.jpg" alt="火箭"></td>
-      </tr>
-      <tr>
-          <td>代码</td>
-          <td><code>`code`</code></td>
-          <td><code>function()</code></td>
-      </tr>
-      <tr>
-          <td>列表</td>
-          <td><code>- item</code></td>
-          <td>- 项目符号</td>
-      </tr>
-      <tr>
-          <td>引用</td>
-          <td><code>&gt; text</code></td>
-          <td>&gt; 引用</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<p><em>本教程作为撰写航空航天和太空探索文章的Markdown语法综合参考。请在写作过程中将此页面加入书签以便快速访问。</em></p>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>土星五号用于阿波罗任务，可以将140,000公斤载荷送入低地球轨道。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>
-
-                </div>
-            </article>
-        </div>
-    </main>
-    <script src="/js/fuse.min.js"></script>
-    <script src="/js/script.js"></script>
-</body>
-</html> 
+</code></pre><h3 id=命名规范>命名规范</h3><ul><li><strong>文章</strong>: 使用kebab-case (<code>space-propulsion-systems.md</code>)</li><li><strong>图片</strong>: 使用描述性名称 (<code>saturn-v-launch.jpg</code>)</li><li><strong>音频</strong>: 使用清晰标识符 (<code>rocket-engine-startup.wav</code>)</li></ul><h3 id=内容结构>内容结构</h3><ol><li><strong>引言</strong> - 吸引读者</li><li><strong>技术背景</strong> - 提供上下文</li><li><strong>主要内容</strong> - 详细解释</li><li><strong>示例</strong> - 实际应用</li><li><strong>结论</strong> - 总结和下一步</li></ol><hr><h2 id=快速参考>快速参考</h2><table><thead><tr><th>元素</th><th>语法</th><th>示例</th></tr></thead><tbody><tr><td>粗体</td><td><code>**text**</code></td><td><strong>重要</strong></td></tr><tr><td>斜体</td><td><code>*text*</code></td><td><em>强调</em></td></tr><tr><td>链接</td><td><code>[text](url)</code></td><td><a href=https://nasa.gov>NASA</a></td></tr><tr><td>图片</td><td><code>![alt](path)</code></td><td><img src=/image/rocket.jpg alt=火箭></td></tr><tr><td>代码</td><td><code>`code`</code></td><td><code>function()</code></td></tr><tr><td>列表</td><td><code>- item</code></td><td>- 项目符号</td></tr><tr><td>引用</td><td><code>> text</code></td><td>> 引用</td></tr></tbody></table><hr><p><em>本教程作为撰写航空航天和太空探索文章的Markdown语法综合参考。请在写作过程中将此页面加入书签以便快速访问。</em></p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>土星五号用于阿波罗任务，可以将140,000公斤载荷送入低地球轨道。&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div></article></div></main><script src=/js/fuse.min.js></script><script src=/js/script.js></script></body></html>

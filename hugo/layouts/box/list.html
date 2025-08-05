@@ -171,7 +171,13 @@
         </form>
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
+        // 初始化EmailJS
+        (function() {
+            emailjs.init("JkM1QWHGUHGyUNeS7"); // 需要替换为您的EmailJS Public Key
+        })();
+        
         // 邮件发送功能
         document.getElementById('emailForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -185,11 +191,33 @@
                 return;
             }
             
-            // 构建邮件链接，发送到你的邮箱
-            const mailtoLink = `mailto:dingsili0327@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${userEmail}\n\n${content}`)}`;
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
             
-            // 打开默认邮件客户端
-            window.location.href = mailtoLink;
+            // 使用EmailJS发送邮件
+            const templateParams = {
+                from_name: 'Website Contact',
+                from_email: userEmail,
+                to_email: 'dingsili0327@gmail.com',
+                subject: subject,
+                message: content,
+                reply_to: userEmail
+            };
+            
+            emailjs.send('service_7617w0h', 'template_7085u8d', templateParams)
+                .then(function(response) {
+                    alert('Email sent successfully!');
+                    document.getElementById('emailForm').reset();
+                }, function(error) {
+                    alert('Failed to send email. Please try again.');
+                    console.error('EmailJS Error:', error);
+                })
+                .finally(function() {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
         });
     </script>
     

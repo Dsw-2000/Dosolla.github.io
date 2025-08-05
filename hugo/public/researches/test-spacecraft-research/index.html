@@ -1,131 +1,30 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST: Spacecraft Research and Open Source Simulation - SiLi Ding</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body class="light-mode single-page">
-    
-    
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="/" class="nav-logo">
-                    <span class="logo-main">DOSOLLA</span>
-                    <span class="logo-subtitle">Sound Designer & Tech Explorer</span>
-                </a>
-            </div>
-            <div class="nav-center">
-                <a href="/about/" class="nav-link">About</a>
-                <a href="/online_reports/" class="nav-link ">Online Reports</a>
-                <a href="/publications/" class="nav-link ">Publications</a>
-                <a href="/researches/" class="nav-link active">Researches</a>
-                <a href="/box/" class="nav-link ">BOX</a>
-            </div>
-            <div class="nav-right">
-                <button class="search-btn" id="searchBtn">
-                    <i class="fas fa-search"></i>
-                </button>
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-    
-    <div class="search-overlay" id="searchOverlay">
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search by title, content, tags..." autocomplete="off">
-            <button class="search-close" id="searchClose">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="search-results" id="searchResults"></div>
-        </div>
-    </div>
-    
-    <main class="main-content">
-        <div class="container">
-            <article class="article-content">
-                <a href="/researches/" class="back-to-reports">
-                    <i class="fas fa-arrow-left"></i> 
-                    All Researches
-                </a>
-                <header class="article-header">
-                    <h1 class="article-title">TEST: Spacecraft Research and Open Source Simulation</h1>
-                    
-                    <p class="article-description">A test research report on spacecraft simulation, including code, open source links, and video preview.</p>
-                    
-                    <div class="article-meta">
-                        <span class="article-date"><i class="fas fa-calendar-alt"></i> 2025年6月1日</span>
-                        
-                        <span class="article-category"><i class="fas fa-folder"></i> Aerospace</span>
-                        
-                        
-                    </div>
-                    
-                    <div class="article-tags">
-                        
-                        <span class="article-tag">#Spacecraft</span>
-                        
-                        <span class="article-tag">#Simulation</span>
-                        
-                        <span class="article-tag">#Open Source</span>
-                        
-                        <span class="article-tag">#Research</span>
-                        
-                        <span class="article-tag">#Test</span>
-                        
-                    </div>
-                    
-                </header>
-                <div class="article-body">
-                    <h2 id="introduction">Introduction</h2>
-<p>This is a test research report for the Researches section. The topic is spacecraft simulation and open source tools for aerospace engineering.</p>
-<h2 id="project-overview">Project Overview</h2>
-<p>We explore the use of open source software to simulate spacecraft attitude control and orbital mechanics.</p>
-<h3 id="key-features">Key Features</h3>
-<ul>
-<li>Real-time 3D visualization</li>
-<li>Physics-based simulation</li>
-<li>Modular codebase</li>
-</ul>
-<h2 id="example-code">Example Code</h2>
-<p>Here is a simple Python example for simulating a spacecraft&rsquo;s attitude using quaternions:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.spatial.transform <span style="color:#f92672">import</span> Rotation <span style="color:#66d9ef">as</span> R
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Initial attitude (quaternion)</span>
-</span></span><span style="display:flex;"><span>q0 <span style="color:#f92672">=</span> R<span style="color:#f92672">.</span>from_euler(<span style="color:#e6db74">&#39;xyz&#39;</span>, [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>], degrees<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)<span style="color:#f92672">.</span>as_quat()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Simulate a rotation about the Z axis</span>
-</span></span><span style="display:flex;"><span>delta_q <span style="color:#f92672">=</span> R<span style="color:#f92672">.</span>from_euler(<span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#ae81ff">45</span>, degrees<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)<span style="color:#f92672">.</span>as_quat()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># New attitude</span>
-</span></span><span style="display:flex;"><span>q1 <span style="color:#f92672">=</span> R<span style="color:#f92672">.</span>from_quat(q0) <span style="color:#f92672">*</span> R<span style="color:#f92672">.</span>from_quat(delta_q)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;New attitude (quaternion):&#34;</span>, q1<span style="color:#f92672">.</span>as_quat())
-</span></span></code></pre></div><h2 id="open-source-project">Open Source Project</h2>
-<p>We use the <a href="https://www.orekit.org/">Orekit</a> library for orbital mechanics and the <a href="https://github.com/spacecraft-sim/spacecraft-simulator">Spacecraft-Simulator</a> project for real-time visualization.</p>
-<ul>
-<li>GitHub: <a href="https://github.com/spacecraft-sim/spacecraft-simulator">spacecraft-sim/spacecraft-simulator</a></li>
-<li>Documentation: <a href="https://www.orekit.org/static/apidocs/index.html">Orekit Docs</a></li>
-</ul>
-<h2 id="video-preview">Video Preview</h2>
-<p>Watch a demonstration of spacecraft simulation on YouTube:</p>
-<p><a href="https://www.youtube.com/watch?v=1iFq3l4PzVw"><img src="https://img.youtube.com/vi/1iFq3l4PzVw/0.jpg" alt="Spacecraft Simulation Demo"></a></p>
-<p>Or preview directly:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1iFq3l4PzVw" title="Spacecraft Simulation Demo" frameborder="0" allowfullscreen></iframe>
-<h2 id="conclusion">Conclusion</h2>
-<p>Open source tools make it easier for researchers and students to experiment with spacecraft dynamics and control. This test article demonstrates how to integrate code, documentation, and multimedia in a research report.</p>
-
-                </div>
-            </article>
-        </div>
-    </main>
-    <script src="/js/fuse.min.js"></script>
-    <script src="/js/script.js"></script>
-</body>
-</html> 
+<!doctype html><html lang=zh-CN><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>TEST: Spacecraft Research and Open Source Simulation - SiLi Ding</title><link rel=stylesheet href=/css/styles.css><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css></head><body class="light-mode single-page"><nav class=navbar><div class=nav-container><div class=nav-left><a href=/ class=nav-logo><span class=logo-main>DOSOLLA</span>
+<span class=logo-subtitle>Sound Designer & Tech Explorer</span></a></div><div class=nav-center><a href=/about/ class=nav-link>About</a>
+<a href=/online_reports/ class=nav-link>Online Reports</a>
+<a href=/publications/ class=nav-link>Publications</a>
+<a href=/researches/ class="nav-link active">Researches</a>
+<a href=/box/ class=nav-link>BOX</a></div><div class=nav-right><button class=search-btn id=searchBtn>
+<i class="fas fa-search"></i>
+</button>
+<button class=theme-toggle id=themeToggle>
+<i class="fas fa-moon"></i></button></div></div></nav><div class=search-overlay id=searchOverlay><div class=search-container><input type=text id=searchInput placeholder="Search by title, content, tags..." autocomplete=off>
+<button class=search-close id=searchClose>
+<i class="fas fa-times"></i></button><div class=search-results id=searchResults></div></div></div><main class=main-content><div class=container><article class=article-content><a href=/researches/ class=back-to-reports><i class="fas fa-arrow-left"></i>
+All Researches</a><header class=article-header><h1 class=article-title>TEST: Spacecraft Research and Open Source Simulation</h1><p class=article-description>A test research report on spacecraft simulation, including code, open source links, and video preview.</p><div class=article-meta><span class=article-date><i class="fas fa-calendar-alt"></i> 2025年6月1日</span>
+<span class=article-category><i class="fas fa-folder"></i> Aerospace</span></div><div class=article-tags><span class=article-tag>#Spacecraft</span>
+<span class=article-tag>#Simulation</span>
+<span class=article-tag>#Open Source</span>
+<span class=article-tag>#Research</span>
+<span class=article-tag>#Test</span></div></header><div class=article-body><h2 id=introduction>Introduction</h2><p>This is a test research report for the Researches section. The topic is spacecraft simulation and open source tools for aerospace engineering.</p><h2 id=project-overview>Project Overview</h2><p>We explore the use of open source software to simulate spacecraft attitude control and orbital mechanics.</p><h3 id=key-features>Key Features</h3><ul><li>Real-time 3D visualization</li><li>Physics-based simulation</li><li>Modular codebase</li></ul><h2 id=example-code>Example Code</h2><p>Here is a simple Python example for simulating a spacecraft&rsquo;s attitude using quaternions:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> numpy <span style=color:#66d9ef>as</span> np
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> scipy.spatial.transform <span style=color:#f92672>import</span> Rotation <span style=color:#66d9ef>as</span> R
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Initial attitude (quaternion)</span>
+</span></span><span style=display:flex><span>q0 <span style=color:#f92672>=</span> R<span style=color:#f92672>.</span>from_euler(<span style=color:#e6db74>&#39;xyz&#39;</span>, [<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>], degrees<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)<span style=color:#f92672>.</span>as_quat()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Simulate a rotation about the Z axis</span>
+</span></span><span style=display:flex><span>delta_q <span style=color:#f92672>=</span> R<span style=color:#f92672>.</span>from_euler(<span style=color:#e6db74>&#39;z&#39;</span>, <span style=color:#ae81ff>45</span>, degrees<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)<span style=color:#f92672>.</span>as_quat()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># New attitude</span>
+</span></span><span style=display:flex><span>q1 <span style=color:#f92672>=</span> R<span style=color:#f92672>.</span>from_quat(q0) <span style=color:#f92672>*</span> R<span style=color:#f92672>.</span>from_quat(delta_q)
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;New attitude (quaternion):&#34;</span>, q1<span style=color:#f92672>.</span>as_quat())
+</span></span></code></pre></div><h2 id=open-source-project>Open Source Project</h2><p>We use the <a href=https://www.orekit.org/>Orekit</a> library for orbital mechanics and the <a href=https://github.com/spacecraft-sim/spacecraft-simulator>Spacecraft-Simulator</a> project for real-time visualization.</p><ul><li>GitHub: <a href=https://github.com/spacecraft-sim/spacecraft-simulator>spacecraft-sim/spacecraft-simulator</a></li><li>Documentation: <a href=https://www.orekit.org/static/apidocs/index.html>Orekit Docs</a></li></ul><h2 id=video-preview>Video Preview</h2><p>Watch a demonstration of spacecraft simulation on YouTube:</p><p><a href="https://www.youtube.com/watch?v=1iFq3l4PzVw"><img src=https://img.youtube.com/vi/1iFq3l4PzVw/0.jpg alt="Spacecraft Simulation Demo"></a></p><p>Or preview directly:</p><iframe width=560 height=315 src=https://www.youtube.com/embed/1iFq3l4PzVw title="Spacecraft Simulation Demo" frameborder=0 allowfullscreen></iframe><h2 id=conclusion>Conclusion</h2><p>Open source tools make it easier for researchers and students to experiment with spacecraft dynamics and control. This test article demonstrates how to integrate code, documentation, and multimedia in a research report.</p></div></article></div></main><script src=/js/fuse.min.js></script><script src=/js/script.js></script></body></html>
