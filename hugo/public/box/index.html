@@ -1,15 +1,227 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>BOX - Message Board</title><link rel=stylesheet href=/css/styles.css><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css><style>.box-bubble-content{max-width:600px;margin:3rem auto 0;background:#fff;border-radius:18px;box-shadow:0 4px 24px rgba(44,62,80,7%);padding:2.5rem 2rem 2rem}.box-header{text-align:center;margin-bottom:2.5rem}.box-title{font-size:2.2rem;font-weight:400;color:var(--forest-green);letter-spacing:2px;margin-bottom:.5rem}.box-subtitle{font-size:1rem;color:#888;font-weight:400;margin-top:1.5rem;margin-bottom:3rem;padding:1.5rem;background:linear-gradient(135deg,#f8f9fa 60%,#e9ecef 100%);border-radius:12px;box-shadow:0 2px 8px rgba(44,62,80,6%);line-height:1.6}.box-description{background:linear-gradient(135deg,#f5f5f5 60%,#e8f5e8 100%);border-radius:18px;padding:2rem;margin-bottom:2rem;text-align:center;color:#666;line-height:1.6}.email-form{display:flex;flex-direction:column;gap:1.2rem}.form-group{display:flex;flex-direction:column;gap:.8rem}.form-label{font-weight:500;color:#333;font-size:1rem}.form-input,.form-textarea{border:1px solid #e0e0e0;border-radius:8px;padding:.8rem 1rem;font-size:1rem;font-family:inherit;background:#fafafa;transition:border-color .2s}.form-input:focus,.form-textarea:focus{outline:none;border-color:var(--forest-green);background:#fff}.form-textarea{min-height:180px;resize:vertical}.submit-btn{background:var(--forest-green);color:#fff;border:none;border-radius:8px;padding:1rem 2rem;font-size:1.1rem;font-weight:500;cursor:pointer;align-self:flex-start;transition:background .2s;margin-top:1rem}.submit-btn:hover{background:var(--forest-green-light)}.submit-btn:disabled{background:#ccc;cursor:not-allowed}@media(max-width:700px){.box-bubble-content{padding:1.5rem;margin:2rem 1rem 0}}</style></head><body class=light-mode><nav class=navbar><div class=nav-container><div class=nav-left><a href=/ class=nav-logo><span class=logo-main>DOSOLLA</span>
-<span class=logo-subtitle>Sound Designer & Tech Explorer</span></a></div><div class=nav-center><a href=/about/ class=nav-link>About</a>
-<a href=/online_reports/ class=nav-link>Online Reports</a>
-<a href=/publications/ class=nav-link>Publications</a>
-<a href=/researches/ class=nav-link>Researches</a>
-<a href=/box/ class="nav-link active">BOX</a></div><div class=nav-right><button class=search-btn id=searchBtn>
-<i class="fas fa-search"></i>
-</button>
-<button class=theme-toggle id=themeToggle>
-<i class="fas fa-moon"></i></button></div></div></nav><div class=search-overlay id=searchOverlay><div class=search-container><input type=text id=searchInput placeholder="Search by title, content, tags..." autocomplete=off>
-<button class=search-close id=searchClose>
-<i class="fas fa-times"></i></button><div class=search-results id=searchResults></div></div></div><div class=box-bubble-content><div class=box-header><div class=box-title>BOX</div><div class=box-subtitle>I'm always open to interesting conversations about sound design, technology, research, and creative projects. Whether you have a question about my work, want to collaborate on something exciting, or just want to share your thoughts and ideas for future content, feel free to reach out!</div></div><form class=email-form id=emailForm><div class=form-group><label class=form-label>Email Subject</label>
-<input type=text class=form-input id=emailSubject placeholder="Enter email subject..." required></div><div class=form-group><label class=form-label>Your Email Address</label>
-<input type=email class=form-input id=userEmail placeholder=your.email@example.com required></div><div class=form-group><label class=form-label>Message Content</label>
-<textarea class=form-textarea id=emailContent placeholder="Write your message here..." required></textarea></div><button type=submit class=submit-btn id=submitBtn>Send Email</button></form></div><script src=https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js></script><script>(function(){emailjs.init("JkM1QWHGUHGyUNeS7")})(),document.getElementById("emailForm").addEventListener("submit",function(e){e.preventDefault();const s=document.getElementById("emailSubject").value,n=document.getElementById("userEmail").value,o=document.getElementById("emailContent").value;if(!s||!n||!o){alert("Please fill in all fields.");return}const t=document.getElementById("submitBtn"),i=t.textContent;t.textContent="Sending...",t.disabled=!0;const a={from_name:"Website Contact",from_email:n,to_email:"dingsili0327@gmail.com",subject:s,message:o,reply_to:n};emailjs.send("service_7617w0h","template_7085u8d",a).then(function(){alert("Email sent successfully!"),document.getElementById("emailForm").reset()},function(e){alert("Failed to send email. Please try again."),console.error("EmailJS Error:",e)}).finally(function(){t.textContent=i,t.disabled=!1})})</script><script src=/js/fuse.min.js></script><script src=/js/script.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX - Message Board</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .box-bubble-content {
+            max-width: 600px;
+            margin: 3rem auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.07);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .box-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .box-title {
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--forest-green);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+        .box-subtitle {
+            font-size: 1rem;
+            color: #888;
+            font-weight: 400;
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8f9fa 60%, #e9ecef 100%);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+            line-height: 1.6;
+        }
+        .box-description {
+            background: linear-gradient(135deg, #f5f5f5 60%, #e8f5e8 100%);
+            border-radius: 18px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #666;
+            line-height: 1.6;
+        }
+        .email-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .form-label {
+            font-weight: 500;
+            color: #333;
+            font-size: 1rem;
+        }
+        .form-input, .form-textarea {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            font-family: inherit;
+            background: #fafafa;
+            transition: border-color 0.2s;
+        }
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--forest-green);
+            background: #fff;
+        }
+        .form-textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: var(--forest-green);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            align-self: flex-start;
+            transition: background 0.2s;
+            margin-top: 1rem;
+        }
+        .submit-btn:hover {
+            background: var(--forest-green-light);
+        }
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        @media (max-width: 700px) {
+            .box-bubble-content { 
+                padding: 1.5rem; 
+                margin: 2rem 1rem 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="nav-logo">
+                    <span class="logo-main">DOSOLLA</span>
+                    <span class="logo-subtitle">Sound Designer & Tech Explorer</span>
+                </a>
+            </div>
+            <div class="nav-center">
+                <a href="/about/" class="nav-link">About</a>
+                <a href="/online_reports/" class="nav-link">Online Reports</a>
+                <a href="/publications/" class="nav-link">Publications</a>
+                <a href="/researches/" class="nav-link">Researches</a>
+                <a href="/box/" class="nav-link active">BOX</a>
+            </div>
+            <div class="nav-right">
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by title, content, tags..." autocomplete="off">
+            <button class="search-close" id="searchClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+    <div class="box-bubble-content">
+        <div class="box-header">
+            <div class="box-title">BOX</div>
+            <div class="box-subtitle">I'm always open to interesting conversations about sound design, technology, research, and creative projects. Whether you have a question about my work, want to collaborate on something exciting, or just want to share your thoughts and ideas for future content, feel free to reach out!</div>
+        </div>
+        
+        <form class="email-form" id="emailForm">
+            <div class="form-group">
+                <label class="form-label">Email Subject</label>
+                <input type="text" class="form-input" id="emailSubject" placeholder="Enter email subject..." required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Your Email Address</label>
+                <input type="email" class="form-input" id="userEmail" placeholder="your.email@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Message Content</label>
+                <textarea class="form-textarea" id="emailContent" placeholder="Write your message here..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="submitBtn">Send Email</button>
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        
+        (function() {
+            emailjs.init("JkM1QWHGUHGyUNeS7"); 
+        })();
+        
+        
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const subject = document.getElementById('emailSubject').value;
+            const userEmail = document.getElementById('userEmail').value;
+            const content = document.getElementById('emailContent').value;
+            
+            if (!subject || !userEmail || !content) {
+                alert('Please fill in all fields.');
+                return;
+            }
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            
+            const templateParams = {
+                from_name: 'Website Contact',
+                from_email: userEmail,
+                to_email: 'dingsili0327@gmail.com',
+                subject: subject,
+                message: content,
+                reply_to: userEmail
+            };
+            
+            emailjs.send('service_7617w0h', 'template_7085u8d', templateParams)
+                .then(function(response) {
+                    alert('Email sent successfully!');
+                    document.getElementById('emailForm').reset();
+                }, function(error) {
+                    alert('Failed to send email. Please try again.');
+                    console.error('EmailJS Error:', error);
+                })
+                .finally(function() {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+    
+    <script src="/js/fuse.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html> 
