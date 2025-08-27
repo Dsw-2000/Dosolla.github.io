@@ -47,4 +47,4 @@ This project is an important milestone in AI assisted film sound production. Alt
 What lies ahead is not the end of artistic authorship, but a broader canvas—where AI augments the imagination of filmmakers and sound designers, and where new forms of sonic storytelling are waiting to be discovered.
 
 ---
-*This research was carried out with the generous support of Professors Shi and Xia, whose guidance and encouragement have been invaluable. Special thanks are also due to the Beijing Film Academy for providing the technical facilities that made this work possible.*
+*This research was carried out with the companionship of Professors Shi and Xia, whose guidance and encouragement have been sincerely appreciated throughout this journey. Heartfelt thanks are also owed to the Beijing Film Academy for providing the technical facilities that made this work possible.*
