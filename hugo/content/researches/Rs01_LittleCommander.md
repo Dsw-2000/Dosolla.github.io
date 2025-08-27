@@ -38,7 +38,7 @@ Between April and May 2024, we conducted systematic tests on all the open-source
 ### Research Publication
 
 We have documented our findings on AI speech synthesis technology applications in film dialogue production in a journal paper. The research paper has been published in *Modern Film Technology*. 
-You can visit [Application Effects and Optimization Strategies of AI Speech Synthesis Technology in Film Dialogue Production](/static/publications/2025_AI_Speech_Synthesis.pdf) section to download the PDF file and read the complete research findings.
+You can visit [Application Effects and Optimization Strategies of AI Speech Synthesis Technology in Film Dialogue Production](/publications) section to download the PDF file and read the complete research findings.
 
 ### Key Insights
 
