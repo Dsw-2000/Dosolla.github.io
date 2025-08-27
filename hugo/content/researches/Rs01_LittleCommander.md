@@ -17,7 +17,7 @@ This project showcases the full integration of AI-generated sound in professiona
 ### Production Period
 **April 2024 - October 2024**
 
-### Film and Behind ^_^
+### Film and Behinds ^_^
 {{< youtube id="D0Fn8endlHQ" width="100%" height="500px" >}}
 
 
@@ -30,15 +30,16 @@ Between April and May 2024, we conducted systematic tests on all the open-source
 - **Sound Effects(EFX, SFX, Foley, Ambience)**: 
   - Elevenlabs, Stable Audio, Pika, Krotos, MyEdit, AudioLDM, AudioGen
 - **Music**: 
-  - Suno, Udio, SoundRaw, AIVA
+  - Suno, Udio, SoundRaw, AIVA  
 - **Edit and Mix**: 
-  - ProTools
+  - ProTools  
+<br>
 
 
 ### Research Publication
 
 We have documented our findings on AI speech synthesis technology applications in film dialogue production in a journal paper. The research paper has been published in *Modern Film Technology*. 
-You can visit [Application Effects and Optimization Strategies of AI Speech Synthesis Technology in Film Dialogue Production](/publications) section to download the PDF file and read the complete research findings.
+You can visit [Application Effects and Optimization Strategies of AI Speech Synthesis Technology in Film Dialogue Production](/publications) section to download the PDF file and read the complete research findings.<br><br>
 
 ### Key Insights
 
